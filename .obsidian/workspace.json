@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "094f5acebe78badf",
+    "type": "split",
+    "children": [
+      {
+        "id": "128ea2b63b283ae9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cac69f262ab5fdb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "workspaces/laurent-blog-v2/docs/laurent-portfolio-migration/migration-portfolio-implementation-plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "migration-portfolio-implementation-plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c333ad93a15d8f07",
+    "type": "split",
+    "children": [
+      {
+        "id": "09585a420f04abea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcb1853ab1eb549d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "de59197e772fb0f3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "33cc7a4d06a3ea08",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 588.5
+  },
+  "right": {
+    "id": "7612fb1677ceb7b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4f98d8e5e6c5760",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd8a0f87005b28da",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bootstrap-venture-feature-framework-business_model-lean_canvas-uvp.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for bootstrap-venture-feature-framework-business_model-lean_canvas-uvp"
+            }
+          },
+          {
+            "id": "3e4f7912e2177c77",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bootstrap-venture-feature-framework-business_model-lean_canvas-uvp.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from bootstrap-venture-feature-framework-business_model-lean_canvas-uvp"
+            }
+          },
+          {
+            "id": "aeb5bb2f1e03eef5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9402b0cd0cfa674",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1bdbd6fa40c7db16",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "workspaces/laurent-blog-v2/docs/laurent-portfolio-migration/migration-portfolio-implementation-plan.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of migration-portfolio-implementation-plan"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 347.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "cac69f262ab5fdb4",
+  "lastOpenFiles": [
+    "workspaces/laurent-portfolio-v1",
+    "playground/Five Forces.md",
+    "workspaces/laurent-blog-v2/docs/laurent-portfolio-migration/migration-portfolio-implementation-plan.md",
+    "workspaces/laurent-blog-v2/docs/laurent-portfolio-migration",
+    "workspaces/laurent-blog-v2/docs/untitled folder",
+    "workspaces/laurent-blog-v2/docs/achievements/content/Achievement_2_Open_Banking_Platform.md",
+    "workspaces/laurent-blog-v2/docs/achievements/content/archives/Achievement_4_Enterprise_Delivery_Platform_Capital_Markets.md",
+    "workspaces/laurent-blog-v2/docs/achievements/content/archives/Achievement_3_Payments_as_a_Service_Platform.md",
+    "workspaces/laurent-blog-v2/docs/achievements/content/archives",
+    "playground/Micro-Private Equity.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-about-tabs-redesign-03-30-2026.md",
+    "workspaces/laurent-blog-v2/dist/assets/index-CRoShj3i.js",
+    "workspaces/laurent-blog-v2/dist/assets/index-BV8ca-1b.css",
+    "workspaces/laurent-blog-v2/dist/index.html",
+    "workspaces/laurent-blog-v2/dist/assets/index-D02nWss6.js",
+    "workspaces/laurent-blog-v2/dist/assets/index-62EEOeA7.css",
+    "workspaces/laurent-blog-v2/dist/assets",
+    "workspaces/laurent-blog-v2/dist/images/laurent-profile.jpg",
+    "workspaces/laurent-blog-v2/dist/images",
+    "workspaces/laurent-blog-v2/docs/superpowers/plans/2026-03-29-hero-cta-smooth-scroll.md",
+    "workspaces/laurent-blog-v2/docs/superpowers/plans/2026-03-29-career-timeline-tabs.md",
+    "workspaces/laurent-blog-v2/docs/superpowers/specs/2026-03-29-career-timeline-tabs-design.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-hero-cta-scroll-03-29-2026.md",
+    "workspaces/laurent-blog-v2/docs/superpowers/specs/2026-03-29-hero-cta-smooth-scroll-design.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-achievements-dashboar-integration-03-29-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-about-skills-03-28-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-about-hero_content-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-3-career-timeline-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-2-about-hero_content-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-2-about-skills-03-28-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-header-content-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/pbi-sprint-1-career-timeline-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/feature_hero-03-27-2026.md",
+    "workspaces/laurent-blog-v2/docs/backlog/handoff-note-03-28-2026.md",
+    "workspaces/laurent-blog-v2/docs/superpowers/plans/2026-03-29-achievements-dashboard-integration.md",
+    "workspaces/laurent-blog-v2/docs/content/laurent-skills.md",
+    "workspaces/laurent-blog-v2/docs/content/laurent-skills-updated.md",
+    "workspaces/laurent-blog-v2/docs/laurent-blog-design-dossier/design system/equity and intelligence.png",
+    "workspaces/laurent-blog-v2/docs/laurent-blog-design-dossier/about_page/screen.png",
+    "workspaces/laurent-blog-v2/docs/laurent-blog-design-dossier/home_page/screen.png",
+    "workspaces/laurent-blog-v2/docs/laurent-blog-design-dossier/home_page_intelligence_stream_updated/screen.png",
+    "workspaces/laurent-blog-v2/docs/laurent-blog-design-dossier/about_page_blog_design_dossier/screen.png",
+    "archives/AMI Labs Application business case/Final Dossier/ami_store_200_days_roadmap.svg",
+    "playground/obsidian-as-ide/Screenshot 2026-03-24 at 11.58.36.png",
+    "workspaces/laurent-blog/laurent-blog-design-dossier/about_page_blog_design_dossier/screen.png",
+    "workspaces/laurent-blog/laurent-blog-design-dossier/design system/equity and intelligence.png"
+  ]
+}
