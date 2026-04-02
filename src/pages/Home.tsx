@@ -4,6 +4,7 @@ import { InsurancePlatformDashboard } from "../components/achievements/Insurance
 import { OpenbankingDashboard } from "../components/achievements/OpenbankingDashboard";
 import { InternalDevPlatformDashboard } from "../components/achievements/InternalDevPlatformDashboard";
 import { AIFactoryPlatformDashboard } from "../components/achievements/AIFactoryPlatformDashboard";
+import { AchievementsCarousel } from "../components/AchievementsCarousel";
 
 /* ─── Data ─── */
 
@@ -717,8 +718,8 @@ export function Home() {
 
       {/* ═══════════════════════════════════════════
           CASE STUDIES & ACHIEVEMENTS (FR-AP-004)
-          4-card grid: 4×1 desktop, 1×4 tablet, 1×4 mobile
-          Card reveal: AnimatePresence slide-down below grid
+          Single-card carousel: auto-rotate 6s, hover-pause
+          Card reveal: AnimatePresence slide-down below carousel
       ═══════════════════════════════════════════ */}
       <section id="case-studies-achievements" className="py-32 bg-surface">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
@@ -736,83 +737,14 @@ export function Home() {
             </button>
           </div>
 
-          {/* 4-card grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={study.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className={`bg-surface-container-lowest p-6 rounded-xl transition-all duration-300 shadow-[0px_12px_32px_rgba(19,27,46,0.04)] border ${expandedCard === study.id
-                  ? "border-tertiary-fixed-dim/60 shadow-[0px_12px_32px_rgba(19,27,46,0.08)]"
-                  : "border-transparent hover:scale-[101%]"
-                  }`}
-              >
-                {/* Key metric focal point */}
-                <div className="relative rounded-xl overflow-hidden mb-6 h-44">
-                  {/* Unsplash background image */}
-                  <img
-                    src={study.imageUrl}
-                    alt={study.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Subtle dark scrim for depth */}
-                  <div className="absolute inset-0 bg-black/40" />
-                  {/* Centred glassmorphism text block */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
-                    <div
-                      className="text-center px-6 py-4 rounded-xl"
-                      style={{
-                        background: "rgba(255,255,255,0.10)",
-                        backdropFilter: "blur(12px)",
-                        WebkitBackdropFilter: "blur(12px)",
-                        border: "1px solid rgba(255,255,255,0.22)",
-                        boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
-                      }}
-                    >
-                      <div className="font-headline text-3xl text-white leading-none mb-1 drop-shadow-sm">
-                        {study.headline}
-                      </div>
-                      <div className="font-label text-[10px] text-white/80 uppercase tracking-widest font-bold mt-2">
-                        {study.headlineSub}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          {/* Achievement carousel — single card, auto-rotating */}
+          <AchievementsCarousel
+            caseStudies={caseStudies}
+            expandedCard={expandedCard}
+            onToggleExpand={(id) => setExpandedCard(expandedCard === id ? null : id)}
+          />
 
-                <span className="font-label text-[10px] text-tertiary-fixed-dim uppercase tracking-widest font-bold">
-                  {study.category} &bull; {study.year}
-                </span>
-                <h3 className="font-headline text-2xl text-primary mt-2 mb-3">{study.title}</h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed mb-6 font-body">
-                  {study.description}
-                </p>
-
-                {/* CTA — toggles the reveal panel */}
-                <button
-                  onClick={() => setExpandedCard(expandedCard === study.id ? null : study.id)}
-                  aria-expanded={expandedCard === study.id}
-                  aria-controls={`insight-panel-${study.id}`}
-                  className="flex items-center text-primary group cursor-pointer bg-transparent border-none p-0"
-                >
-                  <span className="text-xs font-bold font-label uppercase tracking-widest group-hover:mr-2 transition-all">
-                    {expandedCard === study.id ? "Close Insight" : "Read Insight"}
-                  </span>
-                  <span
-                    className={`material-symbols-outlined text-sm ml-2 transition-transform duration-300 ${expandedCard === study.id ? "rotate-90" : ""
-                      }`}
-                  >
-                    arrow_forward
-                  </span>
-                </button>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Card Reveal Animation — full-width panel below the grid */}
+          {/* Card Reveal Animation — full-width panel below the carousel */}
           <AnimatePresence>
             {expandedCard !== null && (
               <motion.div
