@@ -200,7 +200,7 @@ export function InsurancePlatformDashboard() {
 
       {/* ── Footer ── */}
       <div className="mt-6 flex justify-between items-center text-[10px] font-label text-on-surface-variant">
-        <span>Professional Portfolio · Achievement 1 of 3</span>
+        <span>Professional Portfolio · Achievement 1 of 4</span>
         <span className="bg-surface-container px-2.5 py-1 rounded font-semibold uppercase tracking-[1px]">LAURENT VINCENTELLI</span>
       </div>
 

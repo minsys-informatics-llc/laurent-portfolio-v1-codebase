@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { InsurancePlatformDashboard } from "../components/achievements/InsurancePlatformDashboard";
 import { OpenbankingDashboard } from "../components/achievements/OpenbankingDashboard";
 import { InternalDevPlatformDashboard } from "../components/achievements/InternalDevPlatformDashboard";
+import { AIFactoryPlatformDashboard } from "../components/achievements/AIFactoryPlatformDashboard";
 
 /* ─── Data ─── */
 
@@ -157,6 +158,17 @@ const caseStudies = [
     description:
       "Designed and delivered a self-service IDP for a major EMEA telco reducing environment provisioning from 18 days to 4 hours, recovering $9M/yr in lost productivity, and achieving 500+ voluntary adopters.",
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    id: 4,
+    category: "AI / Banking",
+    year: "North America",
+    title: "The AI Factory",
+    headline: "Wks → Hrs",
+    headlineSub: "AI service provisioning",
+    description:
+      "Designed and delivered the missing platform layers for a major North American bank's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
@@ -705,7 +717,7 @@ export function Home() {
 
       {/* ═══════════════════════════════════════════
           CASE STUDIES & ACHIEVEMENTS (FR-AP-004)
-          3-card grid: 3×1 desktop, 1×3 tablet, 1×3 mobile
+          4-card grid: 4×1 desktop, 1×4 tablet, 1×4 mobile
           Card reveal: AnimatePresence slide-down below grid
       ═══════════════════════════════════════════ */}
       <section id="case-studies-achievements" className="py-32 bg-surface">
@@ -724,8 +736,8 @@ export function Home() {
             </button>
           </div>
 
-          {/* 3-card grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* 4-card grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
@@ -816,6 +828,7 @@ export function Home() {
                   {expandedCard === 1 && <InsurancePlatformDashboard />}
                   {expandedCard === 2 && <OpenbankingDashboard />}
                   {expandedCard === 3 && <InternalDevPlatformDashboard />}
+                  {expandedCard === 4 && <AIFactoryPlatformDashboard />}
                 </div>
               </motion.div>
             )}
