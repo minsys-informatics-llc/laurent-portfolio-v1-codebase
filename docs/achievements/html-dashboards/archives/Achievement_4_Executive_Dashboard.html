@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievement 4 — Enterprise Delivery Platform (Capital Markets)</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F5F7;
+    --surface: #FFFFFF;
+    --surface-raised: #F0F1F3;
+    --border: rgba(0,0,0,0.08);
+    --border-accent: rgba(38,166,115,0.30);
+    --text-primary: #1A1D21;
+    --text-secondary: #5A6170;
+    --text-muted: #8C95A3;
+    --accent: #2E9E6E;
+    --accent-dim: rgba(46,158,110,0.10);
+    --accent-glow: rgba(46,158,110,0.05);
+    --warning: #D48A2C;
+    --danger: #C9503E;
+    --blue: #3A7BD5;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4 landscape; margin: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 36px 44px 32px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 220px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .header-left { flex: 1; }
+
+  .header-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .header-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+
+  .header-title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  .header-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .header-right {
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .header-role {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+
+  .header-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .header-meta strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* ── GRID ── */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card-label .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ── SITUATION CARD ── */
+  .situation {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background: linear-gradient(165deg, var(--surface) 0%, #F7FAF8 100%);
+    border-color: var(--border-accent);
+  }
+
+  .situation-context {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 18px;
+  }
+
+  .situation-context strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .burning-platform {
+    background: rgba(224,105,90,0.06);
+    border: 1px solid rgba(224,105,90,0.15);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+
+  .burning-platform-title {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--danger);
+    margin-bottom: 8px;
+  }
+
+  .burning-platform p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .stake-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .stake-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .stake-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+    margin-top: 1px;
+  }
+
+  .stake-icon.money { background: rgba(240,165,91,0.12); color: var(--warning); }
+  .stake-icon.speed { background: rgba(58,123,213,0.12); color: var(--blue); }
+  .stake-icon.risk { background: rgba(224,105,90,0.12); color: var(--danger); }
+  .stake-icon.globe { background: rgba(139,92,246,0.12); color: #8B5CF6; }
+
+  /* ── BIG METRIC CARDS ── */
+  .metric-big {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+  }
+
+  .metric-value {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .metric-value .unit {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-left: 2px;
+  }
+
+  .metric-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .metric-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  .metric-change.positive {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  /* ── CONSTRAINTS VISUAL ── */
+  .constraints-visual {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .constraints-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 4px;
+    flex: 1;
+  }
+
+  .constraint-card {
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .constraint-card.latency {
+    background: rgba(58,123,213,0.06);
+    border: 1px solid rgba(58,123,213,0.18);
+  }
+
+  .constraint-card.regulatory {
+    background: rgba(224,105,90,0.06);
+    border: 1px solid rgba(224,105,90,0.15);
+  }
+
+  .constraint-card.sovereignty {
+    background: rgba(139,92,246,0.06);
+    border: 1px solid rgba(139,92,246,0.18);
+  }
+
+  .constraint-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .constraint-tag.latency { color: var(--blue); }
+  .constraint-tag.regulatory { color: var(--danger); }
+  .constraint-tag.sovereignty { color: #8B5CF6; }
+
+  .constraint-value {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .constraint-desc {
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .constraint-status {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    width: fit-content;
+  }
+
+  .constraint-status.met {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  /* ── VALUE STREAMS ── */
+  .value-streams {
+    grid-column: 2 / 4;
+  }
+
+  .streams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .stream {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 14px 12px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .stream:hover {
+    border-color: var(--border-accent);
+  }
+
+  .stream-number {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .stream-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .stream-desc {
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .stream-tech {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tech-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .tech-tag.blue {
+    background: rgba(58,123,213,0.10);
+    color: var(--blue);
+  }
+
+  .tech-tag.purple {
+    background: rgba(139,92,246,0.10);
+    color: #8B5CF6;
+  }
+
+  .tech-tag.red {
+    background: rgba(201,80,62,0.10);
+    color: var(--danger);
+  }
+
+  /* ── RESULTS ROW ── */
+  .results-row {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .result-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    border-radius: 2px;
+  }
+
+  .result-card:nth-child(1)::after { background: var(--accent); }
+  .result-card:nth-child(2)::after { background: var(--blue); }
+  .result-card:nth-child(3)::after { background: var(--warning); }
+  .result-card:nth-child(4)::after { background: #8B5CF6; }
+  .result-card:nth-child(5)::after { background: #E05AA0; }
+
+  .result-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .result-card:nth-child(1) .result-label { color: var(--accent); }
+  .result-card:nth-child(2) .result-label { color: var(--blue); }
+  .result-card:nth-child(3) .result-label { color: var(--warning); }
+  .result-card:nth-child(4) .result-label { color: #8B5CF6; }
+  .result-card:nth-child(5) .result-label { color: #E05AA0; }
+
+  .result-value {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .result-detail {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  /* ── LEADERSHIP DECISION CALLOUT ── */
+  .decision-callout {
+    grid-column: 1 / 4;
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(46,158,110,0.05) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: 10px;
+    padding: 18px 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .decision-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .decision-content { flex: 1; }
+
+  .decision-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .decision-text {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .decision-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .decision-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 12px 0;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-badge {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .footer-note {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1200px) {
+    .dashboard { grid-template-columns: 1fr; }
+    .situation { grid-column: 1; grid-row: auto; }
+    .constraints-visual { grid-column: 1; }
+    .value-streams { grid-column: 1; }
+    .results-row { grid-column: 1; grid-template-columns: repeat(2, 1fr); }
+    .decision-callout { grid-column: 1; }
+    .constraints-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-tag"><span></span>Achievement 4 — Professional Portfolio</div>
+      <h1 class="header-title">Enterprise Delivery Platform — <em>Capital Markets</em></h1>
+    </div>
+    <div class="header-right">
+      <div class="header-role">Senior Manager / Digital & AI Platform Lead</div>
+      <div class="header-meta">
+        <strong>Client:</strong> Global Capital Markets Institution<br>
+        <strong>Engagement:</strong> [14 months] · [$4.2M]<br>
+        <strong>Team:</strong> [22-person] cross-functional squad<br>
+        <strong>Sponsors:</strong> CTO · Chief Data Officer
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD GRID -->
+  <div class="dashboard">
+
+    <!-- SITUATION — Left Column -->
+    <div class="card situation">
+      <div class="card-label"><span class="dot"></span> Situation & Mandate</div>
+      <p class="situation-context">
+        <strong>[40+ quantitative models]</strong> locked in batch-driven workflows. Clients told <strong>"6+ months and a custom build"</strong> for programmatic access — costing the firm <strong>[3 lost RFPs worth ~$12M/yr]</strong> in data licensing revenue.
+      </p>
+
+      <div class="burning-platform">
+        <div class="burning-platform-title">⚠ Burning Platform</div>
+        <p>MiFID II supervisory review scheduled in [9 months] with fragmented audit trails flagged as material risk. Extreme technical bar: sub-50ms latency, 3-jurisdiction data residency, zero disruption to live trading.</p>
+      </div>
+
+      <ul class="stake-items">
+        <li class="stake-item">
+          <span class="stake-icon money">$</span>
+          <span><strong style="color:var(--warning)">[$12M/yr]</strong> in lost RFP revenue from inability to deliver analytics programmatically</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon speed">⚡</span>
+          <span><strong style="color:var(--blue)">Sub-50ms SLA</strong> required for streaming tick data & analytics</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon risk">!</span>
+          <span><strong style="color:var(--danger)">MiFID II audit</strong> in [9 months] — fragmented logs a material risk</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon globe">◎</span>
+          <span><strong style="color:#8B5CF6">3 jurisdictions</strong> — EU, post-Brexit UK, North America residency</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BIG METRICS -->
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> Time-to-Market</div>
+        <div class="metric-value">6mo→6 <span class="unit">wks</span></div>
+        <div class="metric-sub">[5 institutional clients] live within [8 months]</div>
+      </div>
+      <div class="metric-change positive">▼ 75% faster product delivery</div>
+    </div>
+
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> MiFID II Audit</div>
+        <div class="metric-value">0 <span class="unit">findings</span></div>
+        <div class="metric-sub">[200+ controls] — [cleanest result in 3 years]</div>
+      </div>
+      <div class="metric-change positive">✓ First-pass flawless</div>
+    </div>
+
+    <!-- THREE CONSTRAINTS VISUAL -->
+    <div class="card constraints-visual">
+      <div class="card-label"><span class="dot"></span> Three Non-Negotiable Constraints — All Met</div>
+      <div class="constraints-grid">
+        <div class="constraint-card latency">
+          <div>
+            <div class="constraint-tag latency">Performance</div>
+            <div class="constraint-value">&lt;50ms</div>
+            <div class="constraint-desc">Latency SLA for streaming tick data & analytics via Kafka + REST hybrid layer</div>
+          </div>
+          <div class="constraint-status met">✓ SLA MET</div>
+        </div>
+        <div class="constraint-card regulatory">
+          <div>
+            <div class="constraint-tag regulatory">Regulatory</div>
+            <div class="constraint-value">MiFID II</div>
+            <div class="constraint-desc">Native audit logging, entitlement management & data lineage as first-class capabilities</div>
+          </div>
+          <div class="constraint-status met">✓ ZERO FINDINGS</div>
+        </div>
+        <div class="constraint-card sovereignty">
+          <div>
+            <div class="constraint-tag sovereignty">Data Sovereignty</div>
+            <div class="constraint-value">3 regions</div>
+            <div class="constraint-desc">EU · post-Brexit UK · North America — enforced at platform level, not application layer</div>
+          </div>
+          <div class="constraint-status met">✓ REFERENCE ARCHITECTURE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALUE STREAMS -->
+    <div class="card value-streams">
+      <div class="card-label"><span class="dot"></span> Delivery — Four Value Streams</div>
+      <div class="streams-grid">
+        <div class="stream">
+          <div class="stream-number">01</div>
+          <div class="stream-title">Low-Latency API Tier</div>
+          <div class="stream-desc">High-throughput event-driven layer for tick data & analytics streaming</div>
+          <div class="stream-tech">
+            <span class="tech-tag blue">Kafka</span>
+            <span class="tech-tag blue">REST</span>
+            <span class="tech-tag blue">&lt;50ms</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">02</div>
+          <div class="stream-title">Regulatory Compliance Layer</div>
+          <div class="stream-desc">MiFID II audit logging, entitlement management & data lineage tracking</div>
+          <div class="stream-tech">
+            <span class="tech-tag red">MiFID II</span>
+            <span class="tech-tag red">Audit</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">03</div>
+          <div class="stream-title">Data Sovereignty & Deployment</div>
+          <div class="stream-desc">Multi-region active-passive topology enforcing 3-jurisdiction residency</div>
+          <div class="stream-tech">
+            <span class="tech-tag purple">EU</span>
+            <span class="tech-tag purple">UK</span>
+            <span class="tech-tag purple">NA</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">04</div>
+          <div class="stream-title">Packaged Analytics Products</div>
+          <div class="stream-desc">Quant models productized into versioned, SLA-backed API products</div>
+          <div class="stream-tech">
+            <span class="tech-tag">Vol Surface</span>
+            <span class="tech-tag">Risk Attr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS ROW -->
+    <div class="results-row">
+      <div class="result-card">
+        <div class="result-label">Time-to-Market</div>
+        <div class="result-value">75%</div>
+        <div class="result-detail">Faster product delivery — 6 months → 6 weeks per analytics API</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Regulatory</div>
+        <div class="result-value">0</div>
+        <div class="result-detail">Findings on [200+] controls — [firm's cleanest result in 3 years]</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Revenue Unlock</div>
+        <div class="result-value">[$7.5M]</div>
+        <div class="result-detail">Annualized data licensing revenue within 12 months — lost pipeline recovered</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Platform Reuse</div>
+        <div class="result-value">[2]</div>
+        <div class="result-detail">Additional business lines adopted the multi-region topology within 6 months</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Account Growth</div>
+        <div class="result-value">[$2.1M]</div>
+        <div class="result-detail">Phase 2 — data marketplace · CTO cited compliance-first as key decision</div>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP DECISIONS -->
+    <div class="decision-callout">
+      <div class="decision-icon">◆</div>
+      <div class="decision-content">
+        <div class="decision-title">Leadership Under Pressure — Two Key Decisions</div>
+        <div class="decision-text">
+          <strong>Decision 1 — IP protection vs. quant team demand:</strong> At month 4, the quantitative team insisted on exposing their full model parameter space through the API. I pushed back — this created <strong>IP leakage risk and an unsustainable support burden</strong>. I proposed a "curated output" model with versioned, pre-configured endpoints. The quant lead escalated to the CTO; I walked through three client scenarios proving the curated approach covered <strong>95% of demand</strong> without exposing a single proprietary parameter. The CTO backed the model — it became the firm's standard API productization pattern.
+        </div>
+        <div class="decision-divider"></div>
+        <div class="decision-text">
+          <strong>Decision 2 — Compliance-first sequencing:</strong> I prioritized the MiFID II compliance layer <strong>3 months ahead of client-facing analytics</strong>, over the product team's push to "show momentum" with features first. The supervisory review was existential — a failed audit would freeze everything. Delivering compliance first meant every subsequent product launched <strong>already audit-ready</strong>, eliminating the costly retrofitting cycle.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dashboard -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">Laurent — Professional Portfolio · Achievement 4 of 5</div>
+    <div class="footer-right">
+      <span class="footer-note">[Placeholder] values to be replaced with verified data</span>
+      <span class="footer-badge">Confidential</span>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>

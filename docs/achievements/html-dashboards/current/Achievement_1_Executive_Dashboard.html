@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievement 1 — Insurance-as-a-Service Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F5F7;
+    --surface: #FFFFFF;
+    --surface-raised: #F0F1F3;
+    --border: rgba(0,0,0,0.08);
+    --border-accent: rgba(38,166,115,0.30);
+    --text-primary: #1A1D21;
+    --text-secondary: #5A6170;
+    --text-muted: #8C95A3;
+    --accent: #2E9E6E;
+    --accent-dim: rgba(46,158,110,0.10);
+    --accent-glow: rgba(46,158,110,0.05);
+    --warning: #D48A2C;
+    --danger: #C9503E;
+    --blue: #3A7BD5;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page { size: A4 landscape; margin: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 36px 44px 32px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 220px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .header-left { flex: 1; }
+
+  .header-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .header-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+
+  .header-title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  .header-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .header-right {
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .header-role {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+
+  .header-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .header-meta strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  /* ── GRID ── */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card-label .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ── SITUATION CARD (left column, spans 3 rows) ── */
+  .situation {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background: linear-gradient(165deg, var(--surface) 0%, #F7FAF8 100%);
+    border-color: var(--border-accent);
+  }
+
+  .situation-context {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .situation-context strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .burning-platform {
+    background: rgba(224,105,90,0.06);
+    border: 1px solid rgba(224,105,90,0.15);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+
+  .burning-platform-title {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--danger);
+    margin-bottom: 8px;
+  }
+
+  .burning-platform p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .stake-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .stake-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .stake-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+    margin-top: 1px;
+  }
+
+  .stake-icon.money { background: rgba(240,165,91,0.12); color: var(--warning); }
+  .stake-icon.partners { background: rgba(91,156,240,0.12); color: var(--blue); }
+  .stake-icon.risk { background: rgba(224,105,90,0.12); color: var(--danger); }
+
+  /* ── BIG METRIC CARDS ── */
+  .metric-big {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+  }
+
+  .metric-value {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .metric-value .unit {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-left: 2px;
+  }
+
+  .metric-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .metric-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  .metric-change.positive {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .metric-change.negative {
+    background: rgba(224,105,90,0.1);
+    color: var(--danger);
+  }
+
+  /* ── ONBOARDING TIMELINE VISUAL ── */
+  .timeline-visual {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 8px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .timeline-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .timeline-bar-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .timeline-bar-track {
+    flex: 1;
+    height: 32px;
+    background: var(--surface-raised);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .timeline-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    position: relative;
+  }
+
+  .timeline-bar-fill.before {
+    width: 100%;
+    background: linear-gradient(90deg, var(--danger), rgba(201,80,62,0.8));
+  }
+
+  .timeline-bar-fill.after {
+    width: 21.4%;
+    background: linear-gradient(90deg, var(--accent), rgba(46,158,110,0.85));
+    min-width: 90px;
+  }
+
+  .timeline-bar-weeks {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  .timeline-reduction {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .timeline-reduction strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ── VALUE STREAMS ── */
+  .value-streams {
+    grid-column: 2 / 4;
+  }
+
+  .streams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .stream {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 14px 12px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .stream:hover {
+    border-color: var(--border-accent);
+  }
+
+  .stream-number {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .stream-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .stream-desc {
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .stream-tech {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tech-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  /* ── RESULTS ROW ── */
+  .results-row {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .result-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    right: 18px;
+    height: 2px;
+    border-radius: 2px;
+  }
+
+  .result-card:nth-child(1)::after { background: var(--accent); }
+  .result-card:nth-child(2)::after { background: var(--blue); }
+  .result-card:nth-child(3)::after { background: var(--warning); }
+  .result-card:nth-child(4)::after { background: #8B5CF6; }
+
+  .result-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .result-card:nth-child(1) .result-label { color: var(--accent); }
+  .result-card:nth-child(2) .result-label { color: var(--blue); }
+  .result-card:nth-child(3) .result-label { color: var(--warning); }
+  .result-card:nth-child(4) .result-label { color: #8B5CF6; }
+
+  .result-value {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .result-detail {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  /* ── LEADERSHIP DECISION CALLOUT ── */
+  .decision-callout {
+    grid-column: 1 / 4;
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(46,158,110,0.05) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: 10px;
+    padding: 18px 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .decision-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .decision-content { flex: 1; }
+
+  .decision-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .decision-text {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .decision-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-badge {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .footer-note {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1200px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+    .situation { grid-column: 1; grid-row: auto; }
+    .timeline-visual { grid-column: 1; }
+    .value-streams { grid-column: 1; }
+    .results-row { grid-column: 1; grid-template-columns: repeat(2, 1fr); }
+    .decision-callout { grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-tag"><span></span>Achievement 1 — Professional Portfolio</div>
+      <h1 class="header-title">Insurance-as-a-Service <em>Platform</em></h1>
+    </div>
+    <div class="header-right">
+      <div class="header-role">Digital & AI Platform Lead / Engagement Manager</div>
+      <div class="header-meta">
+        <strong>Client:</strong> Tier-1 Canadian Insurance Carrier<br>
+        <strong>Engagement:</strong> [9 months] · [~$2.8M]<br>
+        <strong>Team:</strong> 12-person cross-functional squad<br>
+        <strong>Sponsors:</strong> CTO · CISO · CDO
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD GRID -->
+  <div class="dashboard">
+
+    <!-- SITUATION — Left Column -->
+    <div class="card situation">
+      <div class="card-label"><span class="dot"></span> Situation & Mandate</div>
+      <p class="situation-context">
+        The carrier had spent <strong>18 months</strong> and <strong>[~$4M/year]</strong> building production-grade hyperscaler infrastructure — with <strong>zero external capabilities</strong> live in production.
+      </p>
+
+      <div class="burning-platform">
+        <div class="burning-platform-title">⚠ Burning Platform</div>
+        <p>CEO had publicly committed to a digital distribution strategy at an investor day. Two key brokerage partners threatening to explore competitors. Regulatory checkpoint [6 months] away.</p>
+      </div>
+
+      <ul class="stake-items">
+        <li class="stake-item">
+          <span class="stake-icon money">$</span>
+          <span><strong style="color:var(--warning)">[~$4M/yr]</strong> in cloud spend generating zero external revenue</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon partners">⬡</span>
+          <span><strong style="color:var(--blue)">[12 partners]</strong> stalled in onboarding queues, some waiting 12+ months</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon risk">!</span>
+          <span><strong style="color:var(--danger)">Board + regulatory</strong> deadlines creating an immovable timeline</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BIG METRICS -->
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> Partner Onboarding</div>
+        <div class="metric-value">14→3 <span class="unit">wks</span></div>
+        <div class="metric-sub">[8 partners] live within 90 days of launch</div>
+      </div>
+      <div class="metric-change positive">▼ 79% reduction</div>
+    </div>
+
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> Regulatory Audit</div>
+        <div class="metric-value">0 <span class="unit">findings</span></div>
+        <div class="metric-sub">Across [140+] controls assessed</div>
+      </div>
+      <div class="metric-change positive">✓ First-pass clean</div>
+    </div>
+
+    <!-- ONBOARDING TIMELINE -->
+    <div class="card timeline-visual">
+      <div class="card-label"><span class="dot"></span> GTM Acceleration — Partner Onboarding Timeline</div>
+      <div class="timeline-bars">
+        <div class="timeline-bar-row">
+          <div class="timeline-bar-label">Before</div>
+          <div class="timeline-bar-track">
+            <div class="timeline-bar-fill before">14 weeks</div>
+          </div>
+        </div>
+        <div class="timeline-bar-row">
+          <div class="timeline-bar-label">After</div>
+          <div class="timeline-bar-track">
+            <div class="timeline-bar-fill after">&lt;3 wks</div>
+          </div>
+          <span class="timeline-bar-weeks"></span>
+        </div>
+      </div>
+      <div class="timeline-reduction">Partners go from LOI to first API call <strong>4.7× faster</strong></div>
+    </div>
+
+    <!-- VALUE STREAMS -->
+    <div class="card value-streams">
+      <div class="card-label"><span class="dot"></span> Delivery — Four Value Streams</div>
+      <div class="streams-grid">
+        <div class="stream">
+          <div class="stream-number">01</div>
+          <div class="stream-title">API Gateway & Management</div>
+          <div class="stream-desc">Multi-tenant gateway with rate limits, OAuth2/OIDC, tenant isolation</div>
+          <div class="stream-tech">
+            <span class="tech-tag">Kong</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">OAuth2</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">02</div>
+          <div class="stream-title">Compliance by Design</div>
+          <div class="stream-desc">VPC-isolated topologies enforcing PIPEDA & provincial data residency</div>
+          <div class="stream-tech">
+            <span class="tech-tag">VPC</span>
+            <span class="tech-tag">PIPEDA</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">03</div>
+          <div class="stream-title">SLA & Observability</div>
+          <div class="stream-desc">Full observability stack with C-suite-ready uptime dashboards</div>
+          <div class="stream-tech">
+            <span class="tech-tag">Monitoring</span>
+            <span class="tech-tag">SLA</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">04</div>
+          <div class="stream-title">Portfolio Enablement</div>
+          <div class="stream-desc">Domain capabilities as versioned, self-service API products</div>
+          <div class="stream-tech">
+            <span class="tech-tag">Policy</span>
+            <span class="tech-tag">Claims</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS ROW -->
+    <div class="results-row">
+      <div class="result-card">
+        <div class="result-label">Accelerated GTM</div>
+        <div class="result-value">79%</div>
+        <div class="result-detail">Reduction in partner onboarding time — 14 weeks → under 3 weeks</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Regulatory Success</div>
+        <div class="result-value">0</div>
+        <div class="result-detail">Material findings across [140+] regulatory controls assessed</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Cost Reduction</div>
+        <div class="result-value">[~$600K]</div>
+        <div class="result-detail">Annual maintenance eliminated · Integration incidents down [70%]</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Account Growth</div>
+        <div class="result-value">[$1.5M]</div>
+        <div class="result-detail">Phase 2 extension — analytics & monetization capabilities</div>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP DECISION -->
+    <div class="decision-callout">
+      <div class="decision-icon">◆</div>
+      <div class="decision-content">
+        <div class="decision-title">Leadership Under Pressure — Key Decision</div>
+        <div class="decision-text">
+          At month 3, the incumbent integration vendor missed a critical delivery. I <strong>pulled the work in-house</strong>, deliberately delaying observability dashboards by 4 weeks to protect the partner onboarding timeline — a tradeoff negotiated directly with the CTO. I also <strong>descoped the real-time billing module</strong> from initial release, arguing that partner connectivity had to come before monetization. Both decisions proved correct.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dashboard -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">Laurent — Professional Portfolio · Achievement 1 of 5</div>
+    <div class="footer-right">
+      <span class="footer-note">[Placeholder] values to be replaced with verified data</span>
+      <span class="footer-badge">Confidential</span>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>

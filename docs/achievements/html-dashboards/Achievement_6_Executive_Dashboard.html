@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievement 6 — The AI Factory (Enterprise AI Platform)</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F5F7;
+    --surface: #FFFFFF;
+    --surface-raised: #F0F1F3;
+    --border: rgba(0,0,0,0.08);
+    --border-accent: rgba(38,166,115,0.30);
+    --text-primary: #1A1D21;
+    --text-secondary: #5A6170;
+    --text-muted: #8C95A3;
+    --accent: #2E9E6E;
+    --accent-dim: rgba(46,158,110,0.10);
+    --accent-glow: rgba(46,158,110,0.05);
+    --warning: #D48A2C;
+    --danger: #C9503E;
+    --blue: #3A7BD5;
+    --purple: #8B5CF6;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @page { size: A4 landscape; margin: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 36px 44px 32px;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 220px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .header-left { flex: 1; }
+
+  .header-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .header-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+
+  .header-title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  .header-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .header-right {
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .header-role {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+
+  .header-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .header-meta strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .header-context-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(46,158,110,0.08);
+    color: var(--accent);
+  }
+
+  .header-phase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+    margin-left: 6px;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(58,123,213,0.08);
+    color: var(--blue);
+  }
+
+  /* ── GRID ── */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-label {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card-label .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ── SITUATION CARD ── */
+  .situation {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    background: linear-gradient(165deg, var(--surface) 0%, #F7FAF8 100%);
+    border-color: var(--border-accent);
+  }
+
+  .situation-context {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+
+  .situation-context strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .burning-platform {
+    background: rgba(224,105,90,0.06);
+    border: 1px solid rgba(224,105,90,0.15);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+
+  .burning-platform-title {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--danger);
+    margin-bottom: 8px;
+  }
+
+  .burning-platform p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .insight-box {
+    background: rgba(58,123,213,0.06);
+    border: 1px solid rgba(58,123,213,0.15);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+
+  .insight-box-title {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+  }
+
+  .insight-box p {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .stake-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 14px;
+  }
+
+  .stake-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .stake-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 10px;
+    margin-top: 1px;
+  }
+
+  .stake-icon.money { background: rgba(240,165,91,0.12); color: var(--warning); }
+  .stake-icon.infra { background: rgba(58,123,213,0.12); color: var(--blue); }
+  .stake-icon.risk { background: rgba(224,105,90,0.12); color: var(--danger); }
+  .stake-icon.gap { background: rgba(139,92,246,0.12); color: var(--purple); }
+
+  /* ── BIG METRIC CARDS ── */
+  .metric-big {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+  }
+
+  .metric-value {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .metric-value .unit {
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-left: 2px;
+  }
+
+  .metric-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .metric-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: fit-content;
+  }
+
+  .metric-change.positive {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .metric-change.in-progress {
+    background: rgba(58,123,213,0.10);
+    color: var(--blue);
+  }
+
+  /* ── LAYER ARCHITECTURE VISUAL ── */
+  .layer-visual {
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .layer-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 52px;
+  }
+
+  .layer-label {
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    padding: 8px 12px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .layer-label.l3 { background: var(--accent); }
+  .layer-label.l2 { background: var(--blue); }
+  .layer-label.l1 { background: var(--text-muted); }
+
+  .layer-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .layer-content.l3 {
+    background: rgba(46,158,110,0.06);
+    border: 1px solid rgba(46,158,110,0.12);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .layer-content.l2 {
+    background: rgba(58,123,213,0.06);
+    border: 1px solid rgba(58,123,213,0.12);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .layer-content.l1 {
+    background: rgba(140,149,163,0.06);
+    border: 1px solid rgba(140,149,163,0.12);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .layer-pill {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .layer-pill.green { background: var(--accent-dim); color: var(--accent); }
+  .layer-pill.blue { background: rgba(58,123,213,0.10); color: var(--blue); }
+  .layer-pill.gray { background: rgba(140,149,163,0.10); color: var(--text-muted); }
+
+  .layer-scope-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-left: auto;
+  }
+
+  .layer-scope-tag.my-scope {
+    background: rgba(46,158,110,0.12);
+    color: var(--accent);
+  }
+
+  .layer-scope-tag.pre-existing {
+    background: rgba(140,149,163,0.10);
+    color: var(--text-muted);
+  }
+
+  .layer-footnote {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .layer-footnote strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ── VALUE STREAMS ── */
+  .value-streams {
+    grid-column: 2 / 4;
+  }
+
+  .streams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .stream {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 14px 12px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .stream:hover {
+    border-color: var(--border-accent);
+  }
+
+  .stream-number {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .stream-layer-tag {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+
+  .stream-layer-tag.l3 { background: var(--accent-dim); color: var(--accent); }
+  .stream-layer-tag.l2 { background: rgba(58,123,213,0.10); color: var(--blue); }
+
+  .stream-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .stream-desc {
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .stream-tech {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tech-tag {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .tech-tag.blue {
+    background: rgba(58,123,213,0.10);
+    color: var(--blue);
+  }
+
+  .tech-tag.purple {
+    background: rgba(139,92,246,0.10);
+    color: var(--purple);
+  }
+
+  /* ── RESULTS ROW ── */
+  .results-row {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 11px;
+  }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 14px 14px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .result-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    border-radius: 2px;
+  }
+
+  .result-card:nth-child(1)::after { background: var(--accent); }
+  .result-card:nth-child(2)::after { background: var(--blue); }
+  .result-card:nth-child(3)::after { background: var(--warning); }
+  .result-card:nth-child(4)::after { background: var(--purple); }
+  .result-card:nth-child(5)::after { background: #E05AA0; }
+  .result-card:nth-child(6)::after { background: #3ABED5; }
+
+  .result-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .result-card:nth-child(1) .result-label { color: var(--accent); }
+  .result-card:nth-child(2) .result-label { color: var(--blue); }
+  .result-card:nth-child(3) .result-label { color: var(--warning); }
+  .result-card:nth-child(4) .result-label { color: var(--purple); }
+  .result-card:nth-child(5) .result-label { color: #E05AA0; }
+  .result-card:nth-child(6) .result-label { color: #3ABED5; }
+
+  .result-value {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+  }
+
+  .result-detail {
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  /* ── LEADERSHIP DECISION CALLOUT ── */
+  .decision-callout {
+    grid-column: 1 / 4;
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(46,158,110,0.05) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: 10px;
+    padding: 18px 24px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .decision-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .decision-content { flex: 1; }
+
+  .decision-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .decision-text {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+  }
+
+  .decision-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .decision-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 12px 0;
+  }
+
+  .priority-moves {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  .priority-move {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+  }
+
+  .move-number {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .move-text {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .move-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .phase2-note {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .phase2-note strong {
+    font-weight: 600;
+    color: var(--blue);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-badge {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .footer-badge.active {
+    background: rgba(58,123,213,0.10);
+    color: var(--blue);
+  }
+
+  .footer-note {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1200px) {
+    .dashboard { grid-template-columns: 1fr; }
+    .situation { grid-column: 1; grid-row: auto; }
+    .layer-visual { grid-column: 1; }
+    .value-streams { grid-column: 1; }
+    .results-row { grid-column: 1; grid-template-columns: repeat(2, 1fr); }
+    .decision-callout { grid-column: 1; }
+    .priority-moves { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-tag"><span></span>Achievement 6 — Professional Portfolio</div>
+      <h1 class="header-title">The AI <em>Factory</em></h1>
+    </div>
+    <div class="header-right">
+      <div class="header-role">Engagement Manager / AI Platform Lead</div>
+      <div class="header-meta">
+        <strong>Client:</strong> Major North American Bank<br>
+        <strong>Engagement:</strong> 10 months (ongoing) · [$4M+]<br>
+        <strong>Team:</strong> [18-person] cross-functional squad<br>
+        <strong>Sponsors:</strong> CTO · Head of I&O
+      </div>
+      <div class="header-context-badge">&#10003; Phase 1 MVP Delivered</div>
+      <span class="header-phase-badge">&#9654; Scaling into Phase 2</span>
+    </div>
+  </header>
+
+  <!-- DASHBOARD GRID -->
+  <div class="dashboard">
+
+    <!-- SITUATION — Left Column -->
+    <div class="card situation">
+      <div class="card-label"><span class="dot"></span> Situation & Mandate</div>
+      <p class="situation-context">
+        The CTO had invested heavily in <strong>AI-optimized infrastructure</strong> (Layer 1 — GPUs, networking, storage) but AI services consumers were unable to use it. Teams needing AI capabilities were stuck doing <strong>raw infrastructure plumbing</strong> instead of building AI solutions.
+      </p>
+
+      <div class="burning-platform">
+        <div class="burning-platform-title">&#9888; Burning Platform</div>
+        <p>C-suite AI strategy stalled. Internal AI teams blocked — no self-service catalogue, no governance, no cost visibility. The gap between raw compute and consumable AI services was widening every quarter.</p>
+      </div>
+
+      <div class="insight-box">
+        <div class="insight-box-title">&#9670; The Missing Layers</div>
+        <p>CTO assumed Layer 1 alone was sufficient. AI consumers wanted a ready-to-consume services catalogue — not raw compute to wire themselves. We proposed the platform layers (2 &amp; 3) to bridge the gap.</p>
+      </div>
+
+      <ul class="stake-items">
+        <li class="stake-item">
+          <span class="stake-icon gap">&#9638;</span>
+          <span><strong style="color:#8B5CF6">No platform layer</strong> between raw GPUs and AI consumers</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon money">$</span>
+          <span><strong style="color:var(--warning)">GPU underutilization</strong> — expensive infrastructure sitting idle</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon risk">!</span>
+          <span><strong style="color:var(--danger)">Zero cost visibility</strong> — no FinOps, no chargeback, no ROI tracking</span>
+        </li>
+        <li class="stake-item">
+          <span class="stake-icon infra">&#9671;</span>
+          <span><strong style="color:var(--blue)">Weeks to provision</strong> any AI workload — manual, fragmented process</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BIG METRICS -->
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> AI Service Provisioning</div>
+        <div class="metric-value">Wks&#8594;Hrs <span class="unit"></span></div>
+        <div class="metric-sub">Self-service catalogue live — first AI workloads onboarded via templates</div>
+      </div>
+      <div class="metric-change positive">&#9660; Order-of-magnitude reduction</div>
+    </div>
+
+    <div class="card metric-big">
+      <div>
+        <div class="card-label"><span class="dot"></span> GPU Utilization</div>
+        <div class="metric-value">[+40%] <span class="unit">uplift</span></div>
+        <div class="metric-sub">Dynamic scheduling &amp; orchestration maximizing accelerator throughput</div>
+      </div>
+      <div class="metric-change positive">&#10003; MVP validated</div>
+    </div>
+
+    <!-- LAYER ARCHITECTURE VISUAL -->
+    <div class="card layer-visual">
+      <div class="card-label"><span class="dot"></span> AI Factory Architecture — Three-Layer Blueprint</div>
+      <div class="layer-stack">
+        <div class="layer-row">
+          <div class="layer-label l3">Layer 3<br>Experience</div>
+          <div class="layer-content l3">
+            <span class="layer-pill green">AI as a Service Catalog</span>
+            <span class="layer-pill green">XOps &amp; Agents Mgmt</span>
+            <span class="layer-pill green">RAG</span>
+            <span class="layer-pill green">Fine-tuning</span>
+            <span class="layer-pill green">Frontier Gateways</span>
+            <span class="layer-scope-tag my-scope">&#9670; My Scope</span>
+          </div>
+        </div>
+        <div class="layer-row">
+          <div class="layer-label l2">Layer 2<br>AI OS</div>
+          <div class="layer-content l2">
+            <span class="layer-pill blue">Scheduling</span>
+            <span class="layer-pill blue">Orchestration</span>
+            <span class="layer-pill blue">IAM</span>
+            <span class="layer-pill blue">FinOps</span>
+            <span class="layer-pill blue">Policy-as-Code</span>
+            <span class="layer-scope-tag my-scope">&#9670; My Scope</span>
+          </div>
+        </div>
+        <div class="layer-row">
+          <div class="layer-label l1">Layer 1<br>Infra</div>
+          <div class="layer-content l1">
+            <span class="layer-pill gray">GPUs &amp; ASICs</span>
+            <span class="layer-pill gray">Networking Fabric</span>
+            <span class="layer-pill gray">Storage</span>
+            <span class="layer-pill gray">Colocation</span>
+            <span class="layer-scope-tag pre-existing">Pre-existing</span>
+          </div>
+        </div>
+      </div>
+      <div class="layer-footnote">Layers 3 &amp; 2 transform raw compute into a <strong>consumable, governed AI marketplace</strong></div>
+    </div>
+
+    <!-- VALUE STREAMS -->
+    <div class="card value-streams">
+      <div class="card-label"><span class="dot"></span> Delivery — Four Value Streams</div>
+      <div class="streams-grid">
+        <div class="stream">
+          <div class="stream-number">VS 01</div>
+          <span class="stream-layer-tag l3">Layer 3</span>
+          <div class="stream-title">"AI as a Service" Catalog</div>
+          <div class="stream-desc">Federated catalogue of one-click templates: RAG, fine-tuning, inference, frontier model gateways, physical AI</div>
+          <div class="stream-tech">
+            <span class="tech-tag">Self-Service</span>
+            <span class="tech-tag">Templates</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">VS 02</div>
+          <span class="stream-layer-tag l3">Layer 3</span>
+          <div class="stream-title">XOps &amp; Agents Management</div>
+          <div class="stream-desc">MLOps/ModelOps lifecycle — build, train, deploy, monitor. Frontier &amp; open-weight model integration. Agent engineering</div>
+          <div class="stream-tech">
+            <span class="tech-tag">MLOps</span>
+            <span class="tech-tag">Agents</span>
+            <span class="tech-tag">ModelOps</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">VS 03</div>
+          <span class="stream-layer-tag l2">Layer 2</span>
+          <div class="stream-title">Scheduling &amp; Orchestration</div>
+          <div class="stream-desc">Inference runtimes (vLLM, Dynamo), Kubernetes-native control plane, Run:ai dynamic GPU sharing, HPC schedulers</div>
+          <div class="stream-tech">
+            <span class="tech-tag blue">K8s</span>
+            <span class="tech-tag blue">Run:ai</span>
+            <span class="tech-tag blue">vLLM</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-number">VS 04</div>
+          <span class="stream-layer-tag l2">Layer 2</span>
+          <div class="stream-title">Governance, Security &amp; FinOps</div>
+          <div class="stream-desc">Policy-as-code, unified IAM, federated infra management, AI FinOps with full P&amp;L cost visibility and ROI tracking</div>
+          <div class="stream-tech">
+            <span class="tech-tag purple">IAM</span>
+            <span class="tech-tag purple">FinOps</span>
+            <span class="tech-tag purple">Policy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS ROW -->
+    <div class="results-row">
+      <div class="result-card">
+        <div class="result-label">Provisioning Speed</div>
+        <div class="result-value">~90%</div>
+        <div class="result-detail">Reduction in time-to-provision AI services — weeks to hours via self-service</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">GPU Utilization</div>
+        <div class="result-value">[+40%]</div>
+        <div class="result-detail">Accelerator throughput uplift via dynamic scheduling &amp; workload orchestration</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Cost Transparency</div>
+        <div class="result-value">100%</div>
+        <div class="result-detail">Unified FinOps view — hybrid cost tracking, chargeback &amp; ROI per AI project</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Catalogue Live</div>
+        <div class="result-value">[6]</div>
+        <div class="result-detail">AI service templates in production — RAG, fine-tuning, inference, gateways &amp; more</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Governance</div>
+        <div class="result-value">Unified</div>
+        <div class="result-detail">IAM, policy-as-code &amp; audit trail across hybrid on-prem &amp; cloud estate</div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Phase 2 Scope</div>
+        <div class="result-value">Scale</div>
+        <div class="result-detail">Expanding to full enterprise — agentic workflows, physical AI &amp; advanced FinOps</div>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP DECISIONS -->
+    <div class="decision-callout">
+      <div class="decision-icon">&#9670;</div>
+      <div class="decision-content">
+        <div class="decision-title">Leadership Under Pressure — Navigating Competing Priorities</div>
+        <div class="decision-text">
+          The defining challenge was <strong>orchestrating 4 interdependent value streams</strong> under a single MVP deadline with a CTO who initially believed only infrastructure mattered. I led the RFP that reframed the problem: the bank didn't need more compute — it needed the <strong>missing platform layers</strong> that turn raw GPUs into consumable AI services. Three deliberate moves made the difference:
+        </div>
+        <div class="priority-moves">
+          <div class="priority-move">
+            <div class="move-number">MOVE 01</div>
+            <div class="move-text"><strong>Sequenced Layer 2 before Layer 3</strong> — ensured scheduling, governance and FinOps were operational before exposing the self-service catalogue, preventing ungoverned GPU sprawl from day one.</div>
+          </div>
+          <div class="priority-move">
+            <div class="move-number">MOVE 02</div>
+            <div class="move-text"><strong>Ringfenced the FinOps stream</strong> — cost transparency was the CTO's #1 anxiety. I staffed it as a parallel track rather than a Phase 2 deferral, delivering unified cost visibility within the MVP timeline.</div>
+          </div>
+          <div class="priority-move">
+            <div class="move-number">MOVE 03</div>
+            <div class="move-text"><strong>MVP-scoped the catalogue to 6 templates</strong> — resisted pressure to launch all service types at once. Focused on the highest-demand patterns (RAG, fine-tuning, inference) to prove value fast and earn trust for Phase 2 expansion.</div>
+          </div>
+        </div>
+        <div class="phase2-note">Phase 1 MVP validated &#8594; <strong>Now scaling into Phase 2</strong> — agentic workflows, physical AI services &amp; enterprise-wide rollout</div>
+        <div class="decision-divider"></div>
+        <div class="decision-text">
+          <strong>Key reframe:</strong> The Head of I&O was mandated by the CTO to "build the missing layer." Our value proposition was the <strong>platform-as-a-product approach</strong> — Layer 3 (the experience layer) and Layer 2 (the AI OS) — that sits between raw compute and the people who need to consume it. This reframe won the RFP and is now the blueprint being scaled across the enterprise.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dashboard -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">Laurent — Professional Portfolio · Achievement 6 (In Progress)</div>
+    <div class="footer-right">
+      <span class="footer-note">[Placeholder] values to be replaced with verified data</span>
+      <span class="footer-badge active">Active Engagement</span>
+      <span class="footer-badge">Confidential</span>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>
