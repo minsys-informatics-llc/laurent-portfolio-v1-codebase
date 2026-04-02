@@ -594,7 +594,7 @@ export function Home() {
             </div>
 
             {/* Skills Content Grid */}
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeSkillsTab}
