@@ -51,21 +51,14 @@ export function Footer() {
           >
             <span className="material-symbols-outlined text-primary text-xl">brand_family</span>
           </a>
-          <a
-            href="mailto:laurent.vincentelli@minsys.xyz"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-variant transition-colors"
-            aria-label="Email"
-          >
-            <span className="material-symbols-outlined text-primary text-xl">alternate_email</span>
-          </a>
         </div>
         <a
-          href="https://laurent.vincentelli.pro"
+          href="https://minsys.xyz"
           target="_blank"
           rel="noopener noreferrer"
           className="font-label text-xs font-bold uppercase tracking-widest text-primary border-b border-primary pb-1 hover:text-on-primary-container transition-colors"
         >
-          Read my Blog
+          Visit minsys.xyz
         </a>
         <div className="text-outline text-[10px] font-label uppercase tracking-widest">
           Curated on Earth &bull; Distributed Globally

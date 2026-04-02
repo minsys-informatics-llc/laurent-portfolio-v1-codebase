@@ -47,12 +47,12 @@ export function Header() {
         {/* Right Actions */}
         <div className="hidden md:flex items-center space-x-6">
           <a
-            href="https://laurent.vincentelli.pro"
+            href="https://linkedin.com/in/laurentvincentelli"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium hover:bg-primary-container transition-all duration-300 ease-in-out font-body text-sm inline-block"
           >
-            Visit my Blog
+            LinkedIn
           </a>
         </div>
 
