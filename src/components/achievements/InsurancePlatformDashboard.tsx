@@ -58,7 +58,7 @@ export function InsurancePlatformDashboard() {
           <CardLabel>Situation &amp; Mandate</CardLabel>
           <p className="text-xs font-body text-secondary leading-[1.75] mb-5">
             The carrier had spent <strong className="text-on-surface font-medium">18 months</strong> and{" "}
-            <strong className="text-on-surface font-medium">~$4M/year</strong> building production-grade hyperscaler
+            <strong className="text-on-surface font-medium">~$2.6M/year</strong> building production-grade hyperscaler
             infrastructure — with <strong className="text-on-surface font-medium">zero external capabilities</strong>{" "}
             live in production.
           </p>
@@ -68,13 +68,21 @@ export function InsurancePlatformDashboard() {
             </div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
               CEO had publicly committed to a digital distribution strategy at an investor day. Two key brokerage
-              partners threatening to explore competitors. Regulatory checkpoint 11 months away.
+              partners threatening to explore competitors. Regulatory checkpoint 11 months away. MVP -MUST- be live in 9 months.
+            </p>
+          </div>
+          <div className="bg-on-primary-container/5 border border-on-primary-container/15 rounded-lg px-4 py-3.5 mb-4">
+            <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-on-primary-container mb-2">
+              ◆ My Mandate
+            </div>
+            <p className="text-xs font-body text-secondary leading-[1.65]">
+              As the Platform lead, co-managed the Bid & Proposal with the Insurance SME Lead. Then led the platform delivery : steering 4 Value Streams towards MVP validation.
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 mt-4">
             <li className="flex gap-2.5 items-start text-xs font-body leading-[1.55] text-secondary">
               <span className="w-5 h-5 rounded-[5px] bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 text-[10px] mt-0.5 font-semibold">$</span>
-              <span><strong className="text-amber-600 font-medium">~$4M/yr</strong> in cloud spend generating zero external revenue</span>
+              <span><strong className="text-amber-600 font-medium">~$2.6M/yr</strong> in cloud spend generating zero external revenue</span>
             </li>
             <li className="flex gap-2.5 items-start text-xs font-body leading-[1.55] text-secondary">
               <span className="w-5 h-5 rounded-[5px] bg-on-primary-container/10 text-on-primary-container flex items-center justify-center shrink-0 text-[10px] mt-0.5">⬡</span>
@@ -146,7 +154,7 @@ export function InsurancePlatformDashboard() {
           <div className="grid grid-cols-4 gap-2.5">
             {[
               { num: "01", title: "API Gateway & Management", desc: "Multi-tenant gateway with rate limits, OAuth2/OIDC, tenant isolation", tags: ["Kong", "AWS", "OAuth2"] },
-              { num: "02", title: "Compliance by Design", desc: "VPC-isolated topologiesand data residency controls as a standard", tags: ["VPC", "DATA RESIDENCY"] },
+              { num: "02", title: "Compliance by Design", desc: "VPC-isolated topologies and data residency controls as a standard", tags: ["VPC", "DATA RESIDENCY"] },
               { num: "03", title: "SLA & Observability", desc: "Full observability stack with C-suite-ready uptime dashboards", tags: ["Monitoring", "SLA"] },
               { num: "04", title: "Portfolio Enablement", desc: "Domain capabilities as versioned, self-service API products", tags: ["Policy", "Claims"] },
             ].map((s) => (
