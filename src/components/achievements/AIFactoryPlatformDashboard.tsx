@@ -46,9 +46,9 @@ export function AIFactoryPlatformDashboard() {
         </div>
         <div className="text-right shrink-0 pt-1">
           <div className="text-[11px] font-body text-on-surface-variant leading-relaxed">
-            <strong className="text-secondary font-medium">Client:</strong> Major North American Bank<br />
-            <strong className="text-secondary font-medium">Engagement:</strong> 10 months (ongoing) · [$4M+]<br />
-            <strong className="text-secondary font-medium">Team:</strong> [18-person] cross-functional squad<br />
+            <strong className="text-secondary font-medium">Client:</strong> Tier-1 North American Bank<br />
+            <strong className="text-secondary font-medium">Engagement:</strong> 10 months ongoing · $4M+<br />
+            <strong className="text-secondary font-medium">Team:</strong> 18-person cross-functional squad<br />
             <strong className="text-secondary font-medium">Sponsors:</strong> CTO · Head of I&O
           </div>
           <div className="mt-2 flex items-center justify-end gap-2">
@@ -72,7 +72,7 @@ export function AIFactoryPlatformDashboard() {
           <p className="text-xs font-body text-secondary leading-[1.75] mb-5">
             The CTO had invested heavily in{" "}
             <strong className="text-on-surface font-medium">AI-optimized infrastructure</strong>{" "}
-            (Layer 1 — GPUs, networking, storage) but AI services consumers were unable to use it.
+            (Layer 1 — Compute, Networking, Storage) but AI services consumers were unable to use it.
             Teams needing AI capabilities were stuck doing{" "}
             <strong className="text-on-surface font-medium">raw infrastructure plumbing</strong>{" "}
             instead of building AI solutions.
@@ -93,8 +93,8 @@ export function AIFactoryPlatformDashboard() {
             </div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
               CTO assumed Layer 1 alone was sufficient. AI consumers wanted a ready-to-consume
-              services catalogue — not raw compute to wire themselves. We proposed the platform
-              layers (2 &amp; 3) to bridge the gap.
+              services catalogue — not raw compute to wire themselves. We proposed a MVP platform
+              layers (2 &amp; 3) to bridge the gap. My role : lead the Bid & Proposal then Lead the MVP's 4 Value Streams
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 mt-4">
@@ -122,7 +122,7 @@ export function AIFactoryPlatformDashboard() {
           <div>
             <CardLabel>AI Service Provisioning</CardLabel>
             <div className="font-headline text-[42px] leading-none text-on-surface mb-1">
-              Wks<span className="font-body text-base font-normal text-on-surface-variant mx-1">→</span>Hrs
+              ∞ → 2 <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">Hours</span>
             </div>
             <div className="text-xs font-body text-secondary leading-[1.5]">Self-service catalogue live — first AI workloads onboarded via templates</div>
           </div>
@@ -143,7 +143,7 @@ export function AIFactoryPlatformDashboard() {
 
         {/* Architecture Visual — col 2–3 */}
         <div className="col-start-2 col-span-2 bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/20 flex flex-col">
-          <CardLabel>AI Factory Architecture — Three-Layer Blueprint</CardLabel>
+          <CardLabel>AI Factory Architecture — MVP's Three-Layer Blueprint</CardLabel>
           <div className="flex flex-col gap-2 mt-1 flex-1 justify-center">
             {/* Layer 3 — Experience */}
             <div className="flex items-stretch rounded-lg overflow-hidden min-h-[52px]">
@@ -154,7 +154,9 @@ export function AIFactoryPlatformDashboard() {
                 <TechTag>AI as a Service Catalog</TechTag>
                 <TechTag>XOps &amp; Agents Mgmt</TechTag>
                 <TechTag>RAG</TechTag>
-                <TechTag>Fine-tuning</TechTag>
+                <TechTag>Training Environments</TechTag>
+                <TechTag>MLOps/ModelOps</TechTag>
+                <TechTag>Inference Gateways</TechTag>
                 <TechTag>Frontier Gateways</TechTag>
                 <span className="ml-auto text-[9px] font-label font-bold tracking-[1.2px] uppercase px-1.5 py-0.5 rounded bg-tertiary-fixed/12 text-tertiary-fixed-dim">◆ My Scope</span>
               </div>
@@ -162,11 +164,12 @@ export function AIFactoryPlatformDashboard() {
             {/* Layer 2 — AI OS */}
             <div className="flex items-stretch rounded-lg overflow-hidden min-h-[52px]">
               <div className="w-[110px] flex items-center justify-center text-[10px] font-label font-bold tracking-[1px] uppercase text-white bg-on-primary-container shrink-0 px-3 py-2 text-center leading-tight">
-                Layer 2<br />AI OS
+                Layer 2<br />AI Operating System
               </div>
               <div className="flex-1 flex items-center px-4 py-2.5 text-[11.5px] font-body text-secondary gap-3 flex-wrap bg-on-primary-container/5 border border-on-primary-container/12 border-l-0 rounded-r-lg">
-                <TechTag variant="blue">Scheduling</TechTag>
-                <TechTag variant="blue">Orchestration</TechTag>
+                <TechTag variant="blue">Scheduling (Slurm in K8s)</TechTag>
+                <TechTag variant="blue">Orchestration (K8s ecosystem)</TechTag>
+                <TechTag variant="blue">Inference (Dynamo + vLLM)</TechTag>
                 <TechTag variant="blue">IAM</TechTag>
                 <TechTag variant="blue">FinOps</TechTag>
                 <TechTag variant="blue">Policy-as-Code</TechTag>
@@ -179,6 +182,7 @@ export function AIFactoryPlatformDashboard() {
                 Layer 1<br />Infra
               </div>
               <div className="flex-1 flex items-center px-4 py-2.5 text-[11.5px] font-body text-secondary gap-3 flex-wrap bg-on-surface-variant/5 border border-on-surface-variant/12 border-l-0 rounded-r-lg">
+                <span className="text-[9px] font-label font-semibold tracking-[0.5px] px-1.5 py-0.5 rounded bg-on-surface-variant/10 text-on-surface-variant">CPUs</span>
                 <span className="text-[9px] font-label font-semibold tracking-[0.5px] px-1.5 py-0.5 rounded bg-on-surface-variant/10 text-on-surface-variant">GPUs &amp; ASICs</span>
                 <span className="text-[9px] font-label font-semibold tracking-[0.5px] px-1.5 py-0.5 rounded bg-on-surface-variant/10 text-on-surface-variant">Networking Fabric</span>
                 <span className="text-[9px] font-label font-semibold tracking-[0.5px] px-1.5 py-0.5 rounded bg-on-surface-variant/10 text-on-surface-variant">Storage</span>
@@ -188,18 +192,18 @@ export function AIFactoryPlatformDashboard() {
             </div>
           </div>
           <div className="text-center mt-3.5 text-[13px] font-body text-secondary">
-            Layers 3 &amp; 2 transform raw compute into a <strong className="text-tertiary-fixed-dim font-semibold">consumable, governed AI marketplace</strong>
+            MVP's Layers 3 &amp; 2 transform raw compute into a <strong className="text-tertiary-fixed-dim font-semibold">consumable, governed AI marketplace</strong>
           </div>
         </div>
 
         {/* Value Streams — col 2–3 */}
         <div className="col-start-2 col-span-2 bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/20">
-          <CardLabel>Delivery — Four Value Streams</CardLabel>
+          <CardLabel>MVP Delivery — Four Value Streams</CardLabel>
           <div className="grid grid-cols-4 gap-2.5">
             {[
-              { num: "VS 01", layer: "Layer 3", title: "\"AI as a Service\" Catalog", desc: "Federated catalogue of one-click templates: RAG, fine-tuning, inference, frontier model gateways, physical AI", tags: [{ label: "Self-Service" }, { label: "Templates" }] },
+              { num: "VS 01", layer: "Layer 3", title: "\"AI as a Service\" Catalog", desc: "Federated catalogue of one-click templates: RAG, Training, MLOps, inference and frontier model gateways", tags: [{ label: "Self-Service" }, { label: "Templates" }] },
               { num: "VS 02", layer: "Layer 3", title: "XOps & Agents Management", desc: "MLOps/ModelOps lifecycle — build, train, deploy, monitor. Frontier & open-weight model integration. Agent engineering", tags: [{ label: "MLOps" }, { label: "Agents" }, { label: "ModelOps" }] },
-              { num: "VS 03", layer: "Layer 2", title: "Scheduling & Orchestration", desc: "Inference runtimes (vLLM, Dynamo), Kubernetes-native control plane, Run:ai dynamic GPU sharing, HPC schedulers", tags: [{ label: "K8s", v: "blue" as const }, { label: "Run:ai", v: "blue" as const }, { label: "vLLM", v: "blue" as const }] },
+              { num: "VS 03", layer: "Layer 2", title: "Scheduling & Orchestration", desc: "Inference runtimes (vLLM, Dynamo), Kubernetes-native control plane, Run:ai dynamic GPU sharing, Slurm HPC schedulers", tags: [{ label: "K8s", v: "blue" as const }, { label: "vLLM", v: "blue" as const }, { label: "Slurm", v: "blue" as const }] },
               { num: "VS 04", layer: "Layer 2", title: "Governance, Security & FinOps", desc: "Policy-as-code, unified IAM, federated infra management, AI FinOps with full P&L cost visibility and ROI tracking", tags: [{ label: "IAM", v: "purple" as const }, { label: "FinOps", v: "purple" as const }, { label: "Policy", v: "purple" as const }] },
             ].map((s) => (
               <div key={s.num} className="bg-surface-container border border-outline-variant/20 rounded-lg p-3.5 hover:border-tertiary-fixed-dim/30 transition-colors">
@@ -222,9 +226,9 @@ export function AIFactoryPlatformDashboard() {
       <div className="grid grid-cols-6 gap-3 mt-4">
         {[
           { label: "Provisioning Speed", value: "~90%", detail: "Reduction in time-to-provision AI services — weeks to hours via self-service", color: "text-tertiary-fixed-dim", bar: "bg-tertiary-fixed-dim" },
-          { label: "GPU Utilization", value: "[+40%]", detail: "Accelerator throughput uplift via dynamic scheduling & workload orchestration", color: "text-on-primary-container", bar: "bg-on-primary-container" },
+          { label: "GPU Utilization", value: "+40%", detail: "Accelerator throughput uplift via dynamic scheduling & workload orchestration", color: "text-on-primary-container", bar: "bg-on-primary-container" },
           { label: "Cost Transparency", value: "100%", detail: "Unified FinOps view — hybrid cost tracking, chargeback & ROI per AI project", color: "text-amber-600", bar: "bg-amber-500" },
-          { label: "Catalogue Live", value: "[6]", detail: "AI service templates in production — RAG, fine-tuning, inference, gateways & more", color: "text-purple-500", bar: "bg-purple-500" },
+          { label: "Catalogue Live", value: "[5]", detail: "AI service templates in production — RAG, fine-tuning, inference, gateways & more", color: "text-purple-500", bar: "bg-purple-500" },
           { label: "Governance", value: "Unified", detail: "IAM, policy-as-code & audit trail across hybrid on-prem & cloud estate", color: "text-error", bar: "bg-error" },
           { label: "Phase 2 Scope", value: "Scale", detail: "Expanding to full enterprise — agentic workflows, physical AI & advanced FinOps", color: "text-on-surface-variant", bar: "bg-outline-variant" },
         ].map((r) => (
@@ -256,7 +260,7 @@ export function AIFactoryPlatformDashboard() {
             {[
               { num: "MOVE 01", text: <><strong className="text-on-surface font-medium">Sequenced Layer 2 before Layer 3</strong> — ensured scheduling, governance and FinOps were operational before exposing the self-service catalogue, preventing ungoverned GPU sprawl from day one.</> },
               { num: "MOVE 02", text: <><strong className="text-on-surface font-medium">Ringfenced the FinOps stream</strong> — cost transparency was the CTO's #1 anxiety. I staffed it as a parallel track rather than a Phase 2 deferral, delivering unified cost visibility within the MVP timeline.</> },
-              { num: "MOVE 03", text: <><strong className="text-on-surface font-medium">MVP-scoped the catalogue to 6 templates</strong> — resisted pressure to launch all service types at once. Focused on the highest-demand patterns (RAG, fine-tuning, inference) to prove value fast and earn trust for Phase 2 expansion.</> },
+              { num: "MOVE 03", text: <><strong className="text-on-surface font-medium">MVP-scoped the catalogue to 5 templates</strong> — resisted pressure to launch all service types at once. Focused on the highest-demand patterns (RAG, fine-tuning, inference) to prove value fast and earn trust for Phase 2 expansion.</> },
             ].map((m) => (
               <div key={m.num} className="bg-surface-container rounded-lg p-3 border border-outline-variant/20">
                 <div className="text-[9px] font-label font-bold uppercase tracking-[1px] text-tertiary-fixed-dim mb-2">{m.num}</div>
@@ -267,7 +271,7 @@ export function AIFactoryPlatformDashboard() {
           <div className="text-[12px] font-body text-secondary">
             Phase 1 MVP validated →{" "}
             <strong className="text-on-primary-container font-semibold">Now scaling into Phase 2</strong>{" "}
-            — agentic workflows, physical AI services &amp; enterprise-wide rollout
+            — agentic workflows, extended AI services &amp; enterprise-wide rollout
           </div>
           <div className="mt-3 pt-3 border-t border-outline-variant/20 text-xs font-body text-secondary leading-[1.65]">
             <strong className="text-on-surface font-medium">Key reframe:</strong> The Head of I&O was mandated by
@@ -283,8 +287,6 @@ export function AIFactoryPlatformDashboard() {
       <div className="mt-6 flex justify-between items-center text-[10px] font-label text-on-surface-variant">
         <span>Professional Portfolio · Achievement 4 of 4</span>
         <div className="flex items-center gap-3">
-          <span className="text-[10px] font-body text-on-surface-variant italic">[Placeholder] values to be replaced with verified data</span>
-          <span className="bg-on-primary-container/10 text-on-primary-container px-2.5 py-1 rounded font-semibold uppercase tracking-[1px]">Active Engagement</span>
           <span className="bg-surface-container px-2.5 py-1 rounded font-semibold uppercase tracking-[1px]">LAURENT VINCENTELLI</span>
         </div>
       </div>
