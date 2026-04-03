@@ -73,23 +73,23 @@ const entrepreneurialEntries = [
     date: "2026 — Present",
     role: "Refounder",
     company: "Minsys",
-    description: "Minsys was refounded in 2026 as a Lean, AI-Powered, and Profitable (LAP) organization. Visit our Storefront at https://minsys.xyz ",
+    description: "Minsys was refounded in 2026 as a Venture Building Micro-PE firm. Au Menu : Rewiring Main Street with high-multiple, next-gen business models.",
     side: "left" as const,
   },
   {
     id: 2,
     date: "2020 — Present",
-    role: "Founding Partner, Limited Partner",
+    role: "Founding Partner, LP",
     company: "WorkshopThinking LLP",
-    description: "High-intensity, practical workshop offering for Main Street Business Leaders to rewire their organization with Digital & AI.",
+    description: "(Re)Thinking Digital & AI, Collaboratively : we catalyse high-intensity, practical workshops for Main Street Business Leaders to rewire their organization with Digital & AI.",
     side: "right" as const,
   },
   {
     id: 3,
     date: "2019-Present",
-    role: "Founding Partner, Limited Partner",
+    role: "Founding Partner, LP",
     company: "Five Forces LLP",
-    description: "Competitive intelligence offering for SMBs. Revealing how Your competitors are weaponizing Digital & AI to shift industry power dynamics.",
+    description: "Actionable Competitive Intelligence for Main Street: Mapping how your rivals leverage Digital & AI to disrupt your market and positioning you to strike back.",
     side: "left" as const,
   },
   {
@@ -113,7 +113,7 @@ const entrepreneurialEntries = [
     date: "2011-2015",
     role: "Founder",
     company: "CloudLifters SARL",
-    description: "Exited (M&A, 9x EBITDA). Cloud migration platform lift-and-shift only. Moving applications and data from any cloud to any cloud, with zero re-architecting.",
+    description: "Exited (M&A, 7x EBITDA). Cloud migration platform lift-and-shift only. Moving applications and data from any cloud to any cloud, with zero re-architecting.",
     side: "right" as const,
   },
   {
@@ -445,7 +445,7 @@ export function Home() {
                 <div className="flex flex-col gap-2">
                   <span className="font-label text-xs tracking-widest uppercase text-on-surface-variant group-hover:text-secondary transition-colors">Path 01</span>
                   <h2 className={`font-headline text-3xl font-bold text-on-surface ${activeTab === 'corporate' ? '' : 'opacity-60'}`}>Corporate Journey</h2>
-                  <p className="font-body text-sm text-on-surface-variant max-w-xs mt-2">Digital & AI platforms Lead in Technology Consulting for Big Four and Big Tech.</p>
+                  <p className="font-body text-sm text-on-surface-variant max-w-s mt-2">Digital & AI platforms Lead in Technology Consulting for Big Four and Big Tech. Building and scaling the platform layer that sits between raw compute and the people who need to use it.</p>
                 </div>
                 {/* Visual Indicator */}
                 {activeTab === 'corporate' && (
@@ -466,7 +466,7 @@ export function Home() {
                 <div className="flex flex-col gap-2">
                   <span className="font-label text-xs tracking-widest uppercase text-on-surface-variant group-hover:text-secondary transition-colors">Path 02</span>
                   <h2 className={`font-headline text-3xl font-bold text-on-surface ${activeTab === 'entrepreneurial' ? '' : 'opacity-60'}`}>Entrepreneurial Journey</h2>
-                  <p className="font-body text-sm text-on-surface-variant max-w-xs mt-2">Building from zero to one, Refounder. Also enjoying Entrepreneurship Through Acquisition.</p>
+                  <p className="font-body text-sm text-on-surface-variant max-w-s mt-2">Refounder at the intersection of Micro-PE and Corporate Venturing. We buy Main Street businesses and use them as platforms to bootstrap and scale net-new business models.</p>
                 </div>
                 {/* Visual Indicator */}
                 {activeTab === 'entrepreneurial' && (
@@ -729,7 +729,7 @@ export function Home() {
                 Case Studies &amp; Achievements
               </h2>
               <p className="font-body text-secondary max-w-xl">
-                Deep dives into pivotal professional projects and strategic victories.
+                Impact in Action: Detailed insights into pivotal professional engagements that define my track record of success.
               </p>
             </div>
             <button onClick={() => scrollToSection('top')} className="font-label text-xs font-bold uppercase tracking-widest text-primary border-b border-primary pb-1 hover:text-on-primary-container transition-colors">
