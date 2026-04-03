@@ -72,6 +72,14 @@ export function OpenbankingDashboard() {
               fintech ecosystem. Immovable 12-month deadline to MVP before the consultation window opened.
             </p>
           </div>
+          <div className="bg-on-primary-container/5 border border-on-primary-container/15 rounded-lg px-4 py-3.5 mb-4">
+            <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-on-primary-container mb-2">
+              ◆ My Mandate
+            </div>
+            <p className="text-xs font-body text-secondary leading-[1.65]">
+              Managed the Bid & Proposal process end to end, on behalf of the Partner. Then led the delivery : steering 4 Value Streams towards MVP validation.
+            </p>
+          </div>
           <ul className="flex flex-col gap-2.5 mt-4">
             <li className="flex gap-2.5 items-start text-xs font-body leading-[1.55] text-secondary">
               <span className="w-5 h-5 rounded-[5px] bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 text-[10px] mt-0.5 font-semibold">$</span>
