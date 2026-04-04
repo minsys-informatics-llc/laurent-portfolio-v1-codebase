@@ -73,7 +73,7 @@ const entrepreneurialEntries = [
     date: "2026 — Present",
     role: "Refounder",
     company: "Minsys",
-    description: "Minsys was refounded in 2026 as a Venture Building Micro-PE firm. Au Menu : Rewiring Main Street with high-multiple, next-gen business models.",
+    description: "Minsys was refounded in 2026 as a Venture Building Micro-PE firm. Au Menu : Rewiring Main Street with high-multiple, next-gen business models. Visit : https://minsys.xyz",
     side: "left" as const,
   },
   {
