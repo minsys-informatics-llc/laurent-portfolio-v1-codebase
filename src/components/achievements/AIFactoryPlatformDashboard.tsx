@@ -46,7 +46,7 @@ export function AIFactoryPlatformDashboard() {
         </div>
         <div className="text-right shrink-0 pt-1">
           <div className="text-[11px] font-body text-on-surface-variant leading-relaxed">
-            <strong className="text-secondary font-medium">Client:</strong> Tier-1 North American Bank<br />
+            <strong className="text-secondary font-medium">Client:</strong> Energy Sector<br />
             <strong className="text-secondary font-medium">Engagement:</strong> 10 months ongoing · $4M+<br />
             <strong className="text-secondary font-medium">Team:</strong> 18-person cross-functional squad<br />
             <strong className="text-secondary font-medium">Sponsors:</strong> CTO · Head of I&O
@@ -82,19 +82,17 @@ export function AIFactoryPlatformDashboard() {
               ⚠ Burning Platform
             </div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
-              C-suite AI strategy stalled. Internal AI teams blocked — no self-service catalogue,
+              CTO assumed Layer 1 alone was sufficient. Internal AI consumers blocked — no self-service AI catalogue,
               no governance, no cost visibility. The gap between raw compute and consumable AI
               services was widening every quarter.
             </p>
           </div>
           <div className="bg-on-primary-container/5 border border-on-primary-container/15 rounded-lg px-4 py-3.5 mb-4">
             <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-on-primary-container mb-2">
-              ◆ The Missing Layers
+              ◆ My Mandate
             </div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
-              CTO assumed Layer 1 alone was sufficient. AI consumers wanted a ready-to-consume
-              services catalogue — not raw compute to wire themselves. We proposed a MVP platform
-              layers (2 &amp; 3) to bridge the gap. My role : lead the Bid & Proposal then Lead the MVP's 4 Value Streams
+              We proposed a MVP platform (layers 2 &amp; 3) to bridge the gap between raw compute and AI services demand. As the Platform Lead, I led the Proposal, hired the Team, then steered the MVP's 4 Value Streams towrds proof of value.
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 mt-4">
@@ -122,11 +120,11 @@ export function AIFactoryPlatformDashboard() {
           <div>
             <CardLabel>AI Service Provisioning</CardLabel>
             <div className="font-headline text-[42px] leading-none text-on-surface mb-1">
-              ∞ → 2 <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">Hours</span>
+              Weeks → 2 <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">Hours</span>
             </div>
-            <div className="text-xs font-body text-secondary leading-[1.5]">Self-service catalogue live — first AI workloads onboarded via templates</div>
+            <div className="text-xs font-body text-secondary leading-[1.5]">First AI workloads onboarded via templates</div>
           </div>
-          <ChangeBadge>▼ Order-of-magnitude reduction</ChangeBadge>
+          <ChangeBadge>▼ 90% reduction</ChangeBadge>
         </div>
 
         {/* KPI 2 — GPU Utilization */}
@@ -134,9 +132,9 @@ export function AIFactoryPlatformDashboard() {
           <div>
             <CardLabel>GPU Utilization</CardLabel>
             <div className="font-headline text-[42px] leading-none text-on-surface mb-1">
-              [+40%] <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">uplift</span>
+              [5] <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">AI Services Live</span>
             </div>
-            <div className="text-xs font-body text-secondary leading-[1.5]">Dynamic scheduling &amp; orchestration maximizing accelerator throughput</div>
+            <div className="text-xs font-body text-secondary leading-[1.5]">MVP's Self-service catalogue live </div>
           </div>
           <ChangeBadge>✓ MVP validated</ChangeBadge>
         </div>
@@ -252,7 +250,7 @@ export function AIFactoryPlatformDashboard() {
             The defining challenge was{" "}
             <strong className="text-on-surface font-medium">orchestrating 4 interdependent value streams</strong>{" "}
             under a single MVP deadline with a CTO who initially believed only infrastructure mattered.
-            I led the RFP that reframed the problem: the bank didn't need more compute — it needed the{" "}
+            I led the RFP that reframed the problem: the Energy conglomerate didn't need more compute — it needed the{" "}
             <strong className="text-on-surface font-medium">missing platform layers</strong> that turn raw GPUs
             into consumable AI services. Three deliberate moves made the difference:
           </p>

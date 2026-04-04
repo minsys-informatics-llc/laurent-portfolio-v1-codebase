@@ -45,7 +45,7 @@ export function Header() {
         </div>
 
         {/* Right Actions */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-4">
           <a
             href="https://linkedin.com/in/laurentvincentelli"
             target="_blank"
@@ -53,6 +53,14 @@ export function Header() {
             className="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium hover:bg-primary-container transition-all duration-300 ease-in-out font-body text-sm inline-block"
           >
             LinkedIn
+          </a>
+          <a
+            href="https://minsys.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-tertiary-fixed text-on-tertiary-fixed px-6 py-2.5 rounded-xl font-medium hover:bg-tertiary-fixed-dim transition-all duration-300 ease-in-out font-body text-sm inline-block"
+          >
+            Minsys.xyz
           </a>
         </div>
 
@@ -85,7 +93,7 @@ export function Header() {
                 {link.name}
               </button>
             ))}
-            <div className="pt-3">
+            <div className="pt-3 flex flex-col space-y-3">
               <a
                 href="https://laurent.vincentelli.pro"
                 target="_blank"
@@ -93,6 +101,14 @@ export function Header() {
                 className="flex-1 bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium font-body text-sm text-center block"
               >
                 Visit my Blog
+              </a>
+              <a
+                href="https://minsys.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-tertiary-fixed text-on-tertiary-fixed px-6 py-2.5 rounded-xl font-medium font-body text-sm text-center block"
+              >
+                Minsys.xyz
               </a>
             </div>
           </div>

@@ -73,15 +73,17 @@ export function InternalDevPlatformDashboard() {
           <div className="bg-error/5 border border-error/15 rounded-lg px-4 py-3.5 mb-3">
             <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-error mb-2">⚠ Burning Platform</div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
-              Security audit surfaced 3 material findings from inconsistent infrastructure. CTO received board
+              Attempt 1: abandoned after 8 months due to low adoption. Attempt 2: shelved when sponsoring VP left.
+              Engineering leadership deeply skeptical. CTO received board
               directive: "fix the developer experience or accept the risk in writing."
             </p>
           </div>
-          <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3.5 mb-4">
-            <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-amber-700 mb-2">⟳ Two Prior Failures</div>
+          <div className="bg-on-primary-container/5 border border-on-primary-container/15 rounded-lg px-4 py-3.5 mb-4">
+            <div className="text-[9.5px] font-label font-semibold uppercase tracking-[1.4px] text-on-primary-container mb-2">
+              ◆ My Mandate
+            </div>
             <p className="text-xs font-body text-secondary leading-[1.65]">
-              Attempt 1: abandoned after 8 months due to low adoption. Attempt 2: shelved when sponsoring VP left.
-              Engineering leadership deeply skeptical.
+              As the Platform delivery lead owning the IDP Roadmap and Backlog, I hired the Team and steered 4 Value Streams towards MVP validation.
             </p>
           </div>
           <ul className="flex flex-col gap-2.5 mt-4">

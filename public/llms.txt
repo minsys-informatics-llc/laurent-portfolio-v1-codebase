@@ -1,0 +1,26 @@
+# Laurent Vincentelli
+
+Digital & AI Platforms Lead and Refounder. I have 15+ years of experience in building and scaling the platform layer that sits between raw compute and the people who need to use it.
+
+## Current Roles
+- Engagement Manager at Deloitte (2023 - Present) - Leading Digital & AI Platform engagements (FSI, Telco).
+- Refounder at Minsys (2026 - Present) - Venture Building Micro-PE firm.
+- Founding Partner at WorkshopThinking LLP (2020 - Present) - Digital & AI workshops for Main Street Business Leaders.
+
+## Past Entrepreneurial Ventures
+- Five Forces LLP - Founding Partner, LP (2019 - Present)
+- Turbulences Engineering LLC - Co-Founder (2016 - 2018)
+- Zeste LTS Systems LTD - Co-Founder (2014 - 2018)
+- CloudLifters SARL - Founder (2011 - 2015) - Exited (M&A, 7x EBITDA)
+- minsys.io - Founder (2010)
+
+## Expertise
+- Digital & AI Platform as a Product
+- Extended Enterprise & Ecosystem Management
+- Hybrid & Distributed Cloud (XaaS)
+- Software Engineering Practices (DevSecOps, SRE, FinOps)
+
+## Links
+- LinkedIn: https://www.linkedin.com/in/laurentvincentelli/
+- Minsys: https://minsys.xyz/
+- Portfolio: https://laurent.vincentelli.pro/
