@@ -1,0 +1,30 @@
+# Laurent Vincentelli - Comprehensive Profile
+
+Digital & AI Platforms Lead, Refounder. 15+ years building and scaling the platform layer that sits between raw compute and the people who need to use it.
+
+## Career Highlights (Corporate)
+- **Deloitte** | Engagement Manager (2023 — Present): Leading Digital & AI Platform engagements (FSI, Telco) through 4 pillars: Client Relationship Management, Financial Management, Team Leadership, and Flow & Delivery Oversight.
+- **IBM** | Senior Manager (2019 — 2023): Steered the Delivery and Adoption of Platform as a Service (PaaS) solutions for the Payments Industry, Telcos and Transportation.
+- **Accenture** | Manager (2018 — 2019): Led the Design and Delivery of a Retailer's Internal Developer Platform, Supporting 300+ Engineers across E-Commerce, Supply Chain, and Loyalty Product Squads.
+- **OVH Cloud** | Cloud Solutions Architect (2017 — 2018): Designed GDPR Compliant Cloud Architecture Patterns for Financial and Public-Sector Clients.
+
+## Entrepreneurial Ventures
+- **Minsys** | Refounder (2026 — Present): Venture Building Micro-PE firm rewriting Main Street with next-gen business models.
+- **WorkshopThinking LLP** | Founding Partner (2020 — Present): High-intensity workshops for Main Street Business Leaders leveraging Digital & AI.
+- **Five Forces LLP** | Founding Partner (2019 — Present): Actionable Competitive Intelligence.
+
+## Core Competencies & Skills
+- **Hard Skills:** Digital & AI Platform as a Product, API Gateway Architecture, Hybrid & Distributed Cloud (AWS, GCP, Azure, IBM Cloud, K8s), Software Engineering Practices (DevSecOps, SRE, MLOps, FinOps).
+- **Frameworks:** SAFe, Kanban, Scrum, Lean Six Sigma Black Belt, Team Topologies, OKR.
+- **Soft Skills:** Executive & Stakeholder Communication, Team Leadership & Talent Development, Cross-functional Collaboration, Negotiation & Conflict Resolution.
+
+## Notable Case Studies
+1. **Open Banking Platform (EU Fintech)**: Built the partner and developer portal for a major EU retail bank compressing time-to-first-API-call by 90% and launching 30+ fintech partners on day one.
+2. **The AI Factory (Energy & Utilities)**: Designed and delivered the missing platform layers for a major conglomerate's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace.
+3. **Insurance-as-a-Service Platform (Insurtech North America)**: Transformed a Tier-1 carrier's stalled hyperscaler investment into a live API ecosystem, cutting onboarding from 14 weeks to 3 weeks.
+4. **Internal Developer Platform (Telecom EMEA)**: Delivered a self-service IDP for a EMEA telco reducing environment provisioning from 18 days to 4 hours.
+
+## Official Links
+- LinkedIn: https://www.linkedin.com/in/laurentvincentelli/
+- Minsys: https://minsys.xyz/
+- Main Portfolio Website: https://laurent.vincentelli.pro/

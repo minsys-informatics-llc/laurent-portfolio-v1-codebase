@@ -128,17 +128,6 @@ const entrepreneurialEntries = [
 
 const caseStudies = [
   {
-    id: 1,
-    category: "Insurtech",
-    year: "North America",
-    title: "Insurance-as-a-Service Platform",
-    headline: "14 Weeks → 3 Weeks",
-    headlineSub: "partner onboarding",
-    description:
-      "Transformed a Tier-1 North American carrier's stalled hyperscaler investment into a live API ecosystem,cutting partner onboarding from 14 weeks to under 3, clearing 140+ regulatory controls with zero findings.",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-  },
-  {
     id: 2,
     category: "Fintech",
     year: "EU",
@@ -150,26 +139,37 @@ const caseStudies = [
     imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80",
   },
   {
+    id: 4,
+    category: "Energy & Utilities",
+    year: "Global Conglomerate",
+    title: "The AI Factory",
+    headline: "98% Reduction",
+    headlineSub: "AI service provisioning time",
+    description:
+      "Designed and delivered the missing platform layers for a major North American bank's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    id: 1,
+    category: "Insurtech",
+    year: "North America",
+    title: "Insurance-as-a-Service Platform",
+    headline: "14 Weeks → 3 Weeks",
+    headlineSub: "partner onboarding",
+    description:
+      "Transformed a Tier-1 North American carrier's stalled hyperscaler investment into a live API ecosystem,cutting partner onboarding from 14 weeks to under 3, clearing 140+ regulatory controls with zero findings.",
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+  },
+  {
     id: 3,
     category: "Telecom",
     year: "EMEA",
     title: "Internal Developer Platform",
-    headline: "18 Days → 4 Hours",
-    headlineSub: "environment provisioning",
+    headline: "[3x] Velocity",
+    headlineSub: "Deployment frequency increase",
     description:
       "Designed and delivered a self-service IDP for a major EMEA telco reducing environment provisioning from 18 days to 4 hours, recovering $9M/yr in lost productivity, and achieving 500+ voluntary adopters.",
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: 4,
-    category: "AI / Banking",
-    year: "North America",
-    title: "The AI Factory",
-    headline: "Wks → Hrs",
-    headlineSub: "AI service provisioning",
-    description:
-      "Designed and delivered the missing platform layers for a major North American bank's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
-    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
