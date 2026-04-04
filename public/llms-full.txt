@@ -11,14 +11,18 @@ Digital & AI Platforms Lead, Refounder. 15+ years building and scaling the platf
 ## Entrepreneurial Ventures
 - **Minsys** | Refounder (2026 — Present): Venture Building Micro-PE firm rewriting Main Street with next-gen business models.
 - **WorkshopThinking LLP** | Founding Partner (2020 — Present): High-intensity workshops for Main Street Business Leaders leveraging Digital & AI.
-- **Five Forces LLP** | Founding Partner (2019 — Present): Actionable Competitive Intelligence.
+- **Five Forces LLP** | Founding Partner (2019 — Present): Actionable Competitive Intelligence Platform.
+- **Turbulences Engineering LLC** | Co-Founder (2016 — 2018): Mothballed. A chaos engineering platform for SMBs. We proactively stress-test infrastructure, and build resilience so you can scale in confidence.
+- **Zeste LTS Systems LTD** | Co-Founder (2014 — 2018): Mothballed. Protect Main Street Businesses. Zeste LTS is a SecOps platform that delivers seamless observability measures and automated countermeasures.
+- **CloudLifters SARL** | Founder (2011 — 2015): Exited (M&A, 7x EBITDA). Cloud migration platform lift-and-shift only. Moving applications and data from any cloud to any cloud, with zero re-architecting.
+- **minsys.io** | Founder (2010): minsys.io as in 'Minimally Viable Systems'. The prologue of my micro-entrepreneurial journey that is now refounded as Minsys.
 
 ## Core Competencies & Skills
 - **Hard Skills:** Digital & AI Platform as a Product, API Gateway Architecture, Hybrid & Distributed Cloud (AWS, GCP, Azure, IBM Cloud, K8s), Software Engineering Practices (DevSecOps, SRE, MLOps, FinOps).
-- **Frameworks:** SAFe, Kanban, Scrum, Lean Six Sigma Black Belt, Team Topologies, OKR.
+- **Frameworks:** SAFe, Kanban, Scrum (PSM, PSPO), Lean Six Sigma Black Belt, Team Topologies, OKR.
 - **Soft Skills:** Executive & Stakeholder Communication, Team Leadership & Talent Development, Cross-functional Collaboration, Negotiation & Conflict Resolution.
 
-## Notable Case Studies
+## Notable Achievements
 1. **Open Banking Platform (EU Fintech)**: Built the partner and developer portal for a major EU retail bank compressing time-to-first-API-call by 90% and launching 30+ fintech partners on day one.
 2. **The AI Factory (Energy & Utilities)**: Designed and delivered the missing platform layers for a major conglomerate's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace.
 3. **Insurance-as-a-Service Platform (Insurtech North America)**: Transformed a Tier-1 carrier's stalled hyperscaler investment into a live API ecosystem, cutting onboarding from 14 weeks to 3 weeks.
