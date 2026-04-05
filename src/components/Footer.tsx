@@ -61,7 +61,7 @@ export function Footer() {
           Visit minsys.xyz
         </a>
         <div className="text-outline text-[10px] font-label uppercase tracking-widest">
-          Contact me on Linkedin
+          Contact me on Linkedin or Github
         </div>
       </div>
     </footer>
