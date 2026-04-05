@@ -466,7 +466,7 @@ export function Home() {
                 <div className="flex flex-col gap-2">
                   <span className="font-label text-xs tracking-widest uppercase text-on-surface-variant group-hover:text-secondary transition-colors">Path 02</span>
                   <h2 className={`font-headline text-3xl font-bold text-on-surface ${activeTab === 'entrepreneurial' ? '' : 'opacity-60'}`}>Entrepreneurial Journey</h2>
-                  <p className="font-body text-sm text-on-surface-variant max-w-s mt-2">Refounder at the intersection of Micro-PE and Corporate Venturing. We buy Main Street businesses and use them as platforms to bootstrap and scale net-new business models.</p>
+                  <p className="font-body text-sm text-on-surface-variant max-w-s mt-2">Refounder at the intersection of Micro-PE and Corporate Venturing. We partner with Main Street businesses and use them as platforms to bootstrap and scale net-new business models.</p>
                 </div>
                 {/* Visual Indicator */}
                 {activeTab === 'entrepreneurial' && (
