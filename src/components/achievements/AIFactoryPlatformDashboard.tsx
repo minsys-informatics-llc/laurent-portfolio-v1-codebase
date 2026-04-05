@@ -130,7 +130,7 @@ export function AIFactoryPlatformDashboard() {
         {/* KPI 2 — GPU Utilization */}
         <div className="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/20 flex flex-col justify-between min-h-[120px]">
           <div>
-            <CardLabel>GPU Utilization</CardLabel>
+            <CardLabel>Ai Service Catalog</CardLabel>
             <div className="font-headline text-[42px] leading-none text-on-surface mb-1">
               [5] <span className="font-body text-base font-normal text-on-surface-variant ml-0.5">AI Services Live</span>
             </div>
