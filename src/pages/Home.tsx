@@ -146,7 +146,7 @@ const caseStudies = [
     headline: "98% Reduction",
     headlineSub: "AI service provisioning time",
     description:
-      "Designed and delivered the missing platform layers for a global Energy & Utilities conglomerate's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
+      "Designed and delivered the missing platform layers (MVP) for a global Energy & Utilities conglomerate's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
   },
   {
@@ -166,7 +166,7 @@ const caseStudies = [
     year: "EMEA",
     title: "Internal Developer Platform",
     headline: "[3x] Velocity",
-    headlineSub: "Deployment frequency increase",
+    headlineSub: "deployment frequency increase",
     description:
       "Designed and delivered a self-service IDP for a major EMEA telco reducing environment provisioning from 18 days to 4 hours, recovering $9M/yr in lost productivity, and achieving 500+ voluntary adopters.",
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
