@@ -6,7 +6,7 @@
 - Professional title: Digital & AI Platforms Lead, Refounder
 - Portfolio website: https://laurent.vincentelli.pro/
 - LinkedIn profile: https://www.linkedin.com/in/laurentvincentelli/
-- Minsys venture: https://minsys.xyz/
+- Minsys : https://minsys.xyz/
 
 ## Professional Summary
 
@@ -17,24 +17,32 @@ The pattern Laurent repeatedly solves: a brilliant multidisciplinary team with w
 ## Full Corporate Career History
 
 ### Deloitte | Engagement Manager (2023 — Present)
+Website: https://www.deloitte.com/
 Leading Digital & AI Platform engagements for Financial Services (FSI) and Telecom clients across four pillars: Client Relationship Management, Financial Management, Team Leadership, and Flow & Delivery Oversight.
 
 ### IBM | Senior Manager (2019 — 2023)
+Website: https://www.ibm.com/
 Steered the delivery and adoption of Platform as a Service (PaaS) solutions for the Payments Industry, Telcos, and Transportation. Bridging technical teams with senior leadership across large-scale transformation programmes.
 
 ### Accenture | Manager (2018 — 2019)
+Website: https://www.accenture.com/
 Led the design and delivery of a major retailer's Internal Developer Platform, supporting 300+ engineers across E-Commerce, Supply Chain, and Loyalty Product Squads. Introduced platform engineering practices at scale.
 
 ### OVH Cloud | Cloud Solutions Architect (2017 — 2018)
+Website: https://www.ovhcloud.com/
 Designed GDPR (EU) 2016/679 Compliant Cloud Architecture Patterns for Financial and Public-Sector clients. Led Pre-Sales Engineering for Cloud Platform (PaaS) adoption across regulated industries.
 
 ### Capgemini | Senior Managing Consultant (2015 — 2016)
+Website: https://www.capgemini.com/
 Co-delivered a PaaS platform solution for mission-critical embedded systems as part of a Defence and Space programme in a classified environment. High-assurance, high-compliance delivery context.
 
 ### Cognizant | Senior Consultant (2011 — 2015)
+Website: https://www.cognizant.com/
 Co-built and managed Cloud Platforms (IaaS, PaaS, CaaS) introducing Agile, DevOps, and SRE practices across transformation programmes in Banking and Telecoms. Built cloud adoption playbooks for regulated financial institutions.
 
 ### GreenSaaS (acquired by Fiducial Group) | Head of Cloud Engineering (2008 — 2011)
+Website: https://www.fiducial.fr/
+Website: https://www.linkedin.com/company/fiducial-cloud/about/
 GreenSaaS was one of the first Cloud Platform Providers in France. Designed and built multi-tenant infrastructures from the ground up. The company was later acquired by Fiducial Group and rebranded as Fiducial Cloud.
 
 ## Full Entrepreneurial History
@@ -44,16 +52,17 @@ Website: https://minsys.xyz/
 Refounded in 2026 as a Venture Building Micro-PE firm. Rewiring Main Street businesses with high-multiple, next-gen business models. Partners with established Main Street businesses and uses them as platforms to bootstrap and scale net-new business models.
 
 ### WorkshopThinking LLP | Founding Partner, LP (2020 — Present)
+Website: https://workshops.minsys.xyz/
 (Re)Thinking Digital & AI, Collaboratively. Catalyses high-intensity, practical workshops for Main Street Business Leaders to rewire their organisation with Digital & AI capabilities.
 
 ### Five Forces LLP | Founding Partner, LP (2019 — Present)
 Actionable Competitive Intelligence for Main Street. Maps how rivals leverage Digital & AI to disrupt markets and positions clients to respond strategically.
 
 ### Turbulences Engineering LLC | Co-Founder (2016 — 2018)
-Status: Mothballed. A chaos engineering platform for SMBs. Proactively stress-tested infrastructure and built resilience so clients could scale in confidence. Discontinued due to market timing challenges.
+Status: Mothballed ( Repurposed into Minsys.xyz's "Technology Benchmarking Capability") . A chaos engineering platform for SMBs. Proactively stress-tested infrastructure and built resilience so clients could scale in confidence. 
 
 ### Zeste LTS Systems LTD | Co-Founder (2014 — 2018)
-Status: Mothballed. A SecOps platform protecting Main Street businesses. Delivered seamless observability measures and automated countermeasures against cyber threats. Discontinued after market repositioning.
+Status: Mothballed ( Repurposed into Minsys.xyz's "CyberSecurity Capability") . A SecOps platform protecting Main Street businesses. Delivered seamless observability measures and automated countermeasures against cyber threats. 
 
 ### CloudLifters SARL | Founder (2011 — 2015)
 Exit: M&A at 7x EBITDA. A cloud migration platform focused on lift-and-shift only — moving applications and data from any cloud to any cloud with zero re-architecting. Successfully acquired.
@@ -65,7 +74,7 @@ The prologue of the micro-entrepreneurial journey. "Minimally Viable Systems" �
 
 ### Digital & AI Platform as a Product
 Builds platforms the way great product teams build software — with a roadmap, a backlog, and real customers. Turns Internal Developer Platforms and Enterprise AI hubs from IT cost centres into business-velocity engines.
-Key areas: Lean Budget, Roadmap & Backlog management, Business Velocity optimisation, User Experience design, Design Thinking, System Thinking.
+Key areas: Lean Budget, Roadmap & Backlog management, Business Velocity optimisation, User Experience design, Design Thinking, Systems Thinking.
 
 ### Extended Enterprise & Ecosystem Management
 Designs and operates the partner and developer layer that extends platform reach beyond the enterprise. From API gateway architecture to ISV onboarding programmes that turn technology alliances into scalable, governed revenue channels.
