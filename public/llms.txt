@@ -1,6 +1,7 @@
 # Laurent Vincentelli
 
 Digital & AI Platforms Lead and Refounder. 15+ years of experience building and scaling the platform layer that sits between raw compute and the people who need to use it.
+Laurent operates on the principle that the platform layer is the most leveraged investment an organisation can make: a well-built platform multiplies the output of every team that runs on top of it
 
 ## Identity
 
