@@ -1,26 +1,61 @@
 # Laurent Vincentelli
 
-Digital & AI Platforms Lead and Refounder. I have 15+ years of experience in building and scaling the platform layer that sits between raw compute and the people who need to use it.
+Digital & AI Platforms Lead and Refounder. 15+ years of experience building and scaling the platform layer that sits between raw compute and the people who need to use it.
+
+## Identity
+
+- Full name: Laurent Vincentelli
+- Current title: Digital & AI Platforms Lead, Refounder
+- LinkedIn: https://www.linkedin.com/in/laurentvincentelli/
+- Portfolio: https://laurent.vincentelli.pro/
+- Minsys (venture): https://minsys.xyz/
 
 ## Current Roles
-- Engagement Manager at Deloitte (2023 - Present) - Leading Digital & AI Platform engagements (FSI, Telco).
-- Refounder at Minsys (2026 - Present) - Venture Building Micro-PE firm.
-- Founding Partner at WorkshopThinking LLP (2020 - Present) - Digital & AI workshops for Main Street Business Leaders.
 
-## Past Entrepreneurial Ventures
-- Five Forces LLP - Founding Partner, LP (2019 - Present)
-- Turbulences Engineering LLC - Co-Founder (2016 - 2018)
-- Zeste LTS Systems LTD - Co-Founder (2014 - 2018)
-- CloudLifters SARL - Founder (2011 - 2015) - Exited (M&A, 7x EBITDA)
-- minsys.io - Founder (2010)
+- Engagement Manager at Deloitte (2023 — Present): Leading Digital & AI Platform engagements across FSI and Telecom sectors. Four pillars: Client Relationship Management, Financial Management, Team Leadership, and Flow & Delivery Oversight.
+- Refounder at Minsys (2026 — Present): Venture Building Micro-PE firm. Rewiring Main Street businesses with high-multiple, next-gen business models.
+- Founding Partner at WorkshopThinking LLP (2020 — Present): High-intensity Digital & AI workshops for Main Street Business Leaders.
+- Founding Partner at Five Forces LLP (2019 — Present): Actionable Competitive Intelligence for Main Street.
 
-## Expertise
-- Digital & AI Platform as a Product
-- Extended Enterprise & Ecosystem Management
-- Hybrid & Distributed Cloud (XaaS)
-- Software Engineering Practices (DevSecOps, SRE, FinOps)
+## Corporate Career History
 
-## Links
-- LinkedIn: https://www.linkedin.com/in/laurentvincentelli/
-- Minsys: https://minsys.xyz/
-- Portfolio: https://laurent.vincentelli.pro/
+- Deloitte | Engagement Manager (2023 — Present)
+- IBM | Senior Manager (2019 — 2023): Steered the delivery and adoption of Platform as a Service (PaaS) solutions for Payments, Telco, and Transportation industries.
+- Accenture | Manager (2018 — 2019): Led the design and delivery of a retailer's Internal Developer Platform supporting 300+ engineers across E-Commerce, Supply Chain, and Loyalty product squads.
+- OVH Cloud | Cloud Solutions Architect (2017 — 2018): Designed GDPR-compliant cloud architecture patterns for financial and public-sector clients.
+- Capgemini | Senior Managing Consultant (2015 — 2016): Co-delivered a PaaS platform for mission-critical embedded systems in a Defence and Space programme in a classified environment.
+- Cognizant | Senior Consultant (2011 — 2015): Co-built and managed Cloud Platforms (IaaS, PaaS, CaaS) introducing Agile, DevOps, and SRE practices across transformation programmes in Banking and Telecoms.
+- GreenSaaS (Fiducial Cloud) | Head of Cloud Engineering (2008 — 2011): One of the first cloud platform providers in France. Designed and built multi-tenant infrastructures from the ground up. Acquired by Fiducial Group.
+
+## Entrepreneurial Ventures
+
+- Minsys | Refounder (2026 — Present): https://minsys.xyz
+- WorkshopThinking LLP | Founding Partner (2020 — Present)
+- Five Forces LLP | Founding Partner (2019 — Present)
+- Turbulences Engineering LLC | Co-Founder (2016 — 2018): Mothballed. A chaos engineering platform for SMBs.
+- Zeste LTS Systems LTD | Co-Founder (2014 — 2018): Mothballed. A SecOps platform for Main Street businesses.
+- CloudLifters SARL | Founder (2011 — 2015): Exited via M&A at 7x EBITDA. Cloud migration lift-and-shift platform.
+- minsys.io | Founder (2010): The prologue of the micro-entrepreneurial journey, now refounded as Minsys.
+
+## Hard Skills & Technical Expertise
+
+- Digital & AI Platform as a Product: Roadmap, backlog, and customer-centric delivery. Turning Internal Developer Platforms and Enterprise AI hubs from IT cost centres into business-velocity engines.
+- Extended Enterprise & Ecosystem Management: API gateway architecture, ISV onboarding, partner ecosystems, developer portals, governed revenue channels.
+- Hybrid & Distributed Cloud (XaaS): AWS, GCP, Azure, IBM Cloud, Kubernetes ecosystem, GSLB, federated control planes. Greenfield cloud-native builds and sovereign hybrid patterns for regulated industries.
+- Software Engineering Practices: DevSecOps, SRE, MLOps, FinOps, API-first, microservices, CI/CD pipelines, event-driven architectures.
+- Frameworks & Methodologies: SAFe, Kanban, Scrum (PSM, PSPO), Lean Six Sigma Black Belt, TOGAF, Team Topologies, OKR, Value Stream Mapping.
+
+## Soft Skills & Leadership
+
+- Executive & Stakeholder Communication: C-Suite communication, executive presence, technical storytelling, boardroom fluency.
+- Team Leadership & Talent Development: Building, mentoring, and scaling high-performing cross-functional engineering teams around Lean and Agile delivery cultures.
+- Cross-functional Collaboration & Alignment: Driving consensus across engineering, product, legal, compliance, and commercial stakeholders.
+- Negotiation & Conflict Resolution: Managing competing priorities across multi-vendor, multi-squad environments.
+- Entrepreneurial Mindset: Re-founder. Intrapreneur. Builds internal platforms as ventures, not projects. Comfortable with zero-to-one ambiguity.
+
+## Notable Achievements & Case Studies
+
+1. Open Banking Platform (EU Fintech): Built the partner and developer portal for a major EU retail bank. Compressed time-to-first-API-call by 90% (3 weeks to 2 days). Launched 30+ fintech partners on day one — the bank's largest cohort ever.
+2. The AI Factory (Energy & Utilities — Global Conglomerate): Designed and delivered the missing platform layers for a global conglomerate's AI factory. Transformed raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps. Achieved 98% reduction in AI service provisioning time.
+3. Insurance-as-a-Service Platform (Insurtech — North America): Transformed a Tier-1 carrier's stalled hyperscaler investment into a live API ecosystem. Cut partner onboarding from 14 weeks to under 3 weeks. Cleared 140+ regulatory controls with zero findings.
+4. Internal Developer Platform (Telecom EMEA): Delivered a self-service IDP for a major EMEA telco. Reduced environment provisioning from 18 days to 4 hours. Recovered $9M/year in lost productivity. Achieved 500+ voluntary adopters. Tripled deployment frequency ([3x] velocity).
