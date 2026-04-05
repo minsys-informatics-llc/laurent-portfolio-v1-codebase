@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
       <loc>https://laurent.vincentelli.pro/</loc>
-      <lastmod>2026-04-04</lastmod>
+      <lastmod>2026-04-05</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
+      <image:image>
+        <image:loc>https://laurent.vincentelli.pro/images/laurent-profile.jpg</image:loc>
+        <image:title>Laurent Vincentelli — Digital &amp; AI Platforms Lead, Refounder</image:title>
+        <image:caption>Professional Portfolio of Laurent Vincentelli, Digital &amp; AI Platforms Lead with 15+ years of experience in platform engineering for the financial, telecom, and energy sectors.</image:caption>
+      </image:image>
    </url>
 </urlset>
