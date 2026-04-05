@@ -146,7 +146,7 @@ const caseStudies = [
     headline: "98% Reduction",
     headlineSub: "AI service provisioning time",
     description:
-      "Designed and delivered the missing platform layers for a major North American bank's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
+      "Designed and delivered the missing platform layers for a global Energy & Utilities conglomerate's AI factory — transforming raw GPU infrastructure into a self-service AI marketplace with unified governance and FinOps.",
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
   },
   {
