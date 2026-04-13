@@ -47,7 +47,7 @@ export function AIFactoryPlatformDashboard() {
         <div className="text-right shrink-0 pt-1">
           <div className="text-[11px] font-body text-on-surface-variant leading-relaxed">
             <strong className="text-secondary font-medium">Client:</strong> Energy Sector<br />
-            <strong className="text-secondary font-medium">Engagement:</strong> 10 months ongoing · $4M+<br />
+            <strong className="text-secondary font-medium">Engagement:</strong> 14 months · $4M+<br />
             <strong className="text-secondary font-medium">Team:</strong> 18-person cross-functional squad<br />
             <strong className="text-secondary font-medium">Sponsors:</strong> CTO · Head of I&O
           </div>
